@@ -48,8 +48,8 @@
 		3292B82A16B44382004153AC /* AFViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFViewController.m; sourceTree = "<group>"; };
 		3292B83116B4447B004153AC /* IPhoneFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPhoneFactory.h; sourceTree = "<group>"; };
 		3292B83216B4447B004153AC /* IPhoneFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPhoneFactory.m; sourceTree = "<group>"; };
-		3292B83416B44491004153AC /* GenericIPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GenericIPhone.h; path = ../GenericIPhone.h; sourceTree = "<group>"; };
-		3292B83516B44491004153AC /* GenericIPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GenericIPhone.m; path = ../GenericIPhone.m; sourceTree = "<group>"; };
+		3292B83416B44491004153AC /* GenericIPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenericIPhone.h; sourceTree = "<group>"; };
+		3292B83516B44491004153AC /* GenericIPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenericIPhone.m; sourceTree = "<group>"; };
 		3292B83716B446D6004153AC /* GenericIPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenericIPad.h; sourceTree = "<group>"; };
 		3292B83816B446D6004153AC /* GenericIPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenericIPad.m; sourceTree = "<group>"; };
 		3292B83A16B44733004153AC /* AppleIPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppleIPhone.h; sourceTree = "<group>"; };

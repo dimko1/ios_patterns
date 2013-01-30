@@ -42,7 +42,7 @@
 		32A01A8A16B5DA9C00E74471 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		32A01A8C16B5DA9C00E74471 /* BPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BPViewController.h; sourceTree = "<group>"; };
 		32A01A8D16B5DA9C00E74471 /* BPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BPViewController.m; sourceTree = "<group>"; };
-		32A01A9416B5DB0800E74471 /* AndroidPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AndroidPhone.h; sourceTree = "<group>"; };
+		32A01A9416B5DB0800E74471 /* FactorySalesMan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FactorySalesMan.h; sourceTree = "<group>"; };
 		32A01A9516B5DB0800E74471 /* AndroidPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AndroidPhone.m; sourceTree = "<group>"; };
 		32A01A9716B5DC6800E74471 /* BPAndroidPhoneBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPAndroidPhoneBuilder.h; sourceTree = "<group>"; };
 		32A01A9816B5DC6800E74471 /* BPAndroidPhoneBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPAndroidPhoneBuilder.m; sourceTree = "<group>"; };
@@ -50,8 +50,7 @@
 		32A01A9B16B5DDBF00E74471 /* LowPricePhoneBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LowPricePhoneBuilder.m; sourceTree = "<group>"; };
 		32A01A9D16B5DF8E00E74471 /* HighPricePhoneBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighPricePhoneBuilder.h; sourceTree = "<group>"; };
 		32A01A9E16B5DF8E00E74471 /* HighPricePhoneBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HighPricePhoneBuilder.m; sourceTree = "<group>"; };
-		32A01AA016B5DFEE00E74471 /* FactorySalesMan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FactorySalesMan.h; path = ../FactorySalesMan.h; sourceTree = "<group>"; };
-		32A01AA116B5DFEE00E74471 /* FactorySalesMan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FactorySalesMan.m; path = ../FactorySalesMan.m; sourceTree = "<group>"; };
+		32A01AA116B5DFEE00E74471 /* FactorySalesMan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FactorySalesMan.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +70,7 @@
 		3295FA6F16B9A41F00E2A521 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				32A01A9416B5DB0800E74471 /* AndroidPhone.h */,
+				32A01A9416B5DB0800E74471 /* FactorySalesMan.h */,
 				32A01A9516B5DB0800E74471 /* AndroidPhone.m */,
 				32A01A9716B5DC6800E74471 /* BPAndroidPhoneBuilder.h */,
 				32A01A9816B5DC6800E74471 /* BPAndroidPhoneBuilder.m */,
@@ -79,7 +78,6 @@
 				32A01A9B16B5DDBF00E74471 /* LowPricePhoneBuilder.m */,
 				32A01A9D16B5DF8E00E74471 /* HighPricePhoneBuilder.h */,
 				32A01A9E16B5DF8E00E74471 /* HighPricePhoneBuilder.m */,
-				32A01AA016B5DFEE00E74471 /* FactorySalesMan.h */,
 				32A01AA116B5DFEE00E74471 /* FactorySalesMan.m */,
 			);
 			name = Classes;
