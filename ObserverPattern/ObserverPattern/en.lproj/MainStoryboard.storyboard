@@ -25,10 +25,25 @@
                                     <action selector="btnNotificationCenterTest:" destination="2" eventType="touchUpInside" id="m9D-Fj-DdO"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GsY-Lc-drC">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="KVO Observation">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnKVOObservationTest:" destination="2" eventType="touchUpInside" id="LrJ-15-hTq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="MJa-VH-rP2" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="1Fy-4b-00F"/>
+                            <constraint firstItem="GsY-Lc-drC" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="BW1-us-XNS"/>
+                            <constraint firstItem="GsY-Lc-drC" firstAttribute="top" secondItem="MJa-VH-rP2" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="XLO-70-mbI"/>
                             <constraint firstItem="MJa-VH-rP2" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="yI2-Ze-jM6"/>
                         </constraints>
                     </view>
@@ -44,6 +59,7 @@
         <class className="OPViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/OPViewController.h"/>
             <relationships>
+                <relationship kind="action" name="btnKVOObservationTest:"/>
                 <relationship kind="action" name="btnNotificationCenterTest:"/>
             </relationships>
         </class>

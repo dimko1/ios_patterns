@@ -11,6 +11,9 @@
 #import "SomeSubscriber.h"
 #import "OtherSubscriber.h"
 
+#import "KVOObserver.h"
+#import "KVOSubject.h"
+
 @interface OPViewController ()
 
 @end
@@ -27,6 +30,23 @@
     
     [subj changeValue:@"strange value" andValue:@"newValue"];
     
+    
+       
+}
+- (IBAction)btnKVOObservationTest:(id)sender {
+    KVOSubject *kvoSubj = [[KVOSubject alloc] init];
+    KVOObserver *kvoObserver = [[KVOObserver alloc] init];
+    
+    [kvoSubj addObserver:kvoObserver forKeyPath:@"changeableProperty"
+                 options:NSKeyValueObservingOptionNew context:nil];
+    
+    kvoSubj.changeableProperty = @"new value";
+    
+    [kvoSubj setValue:@"new value" forKey:@"changeableProperty"];
+    
+    //because kvoSubj will be deallocated after this functions ends we need to remove observer information.
+    [kvoSubj removeObserver:kvoObserver forKeyPath:@"changeableProperty"];
+
 }
 
 - (void)viewDidLoad

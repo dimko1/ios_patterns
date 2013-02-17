@@ -21,6 +21,8 @@
 		326F075716CFD7E3008A69CC /* SomeSubscriber.m in Sources */ = {isa = PBXBuildFile; fileRef = 326F075616CFD7E3008A69CC /* SomeSubscriber.m */; };
 		326F075A16CFD7F5008A69CC /* OtherSubscriber.m in Sources */ = {isa = PBXBuildFile; fileRef = 326F075916CFD7F5008A69CC /* OtherSubscriber.m */; };
 		326F075D16CFDD6A008A69CC /* StandardSubjectImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = 326F075C16CFDD6A008A69CC /* StandardSubjectImplementation.m */; };
+		3297D8C716D0D7DE00DC1575 /* KVOSubject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3297D8C616D0D7DE00DC1575 /* KVOSubject.m */; };
+		3297D8CA16D0D7EF00DC1575 /* KVOObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 3297D8C916D0D7EF00DC1575 /* KVOObserver.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,10 @@
 		326F075916CFD7F5008A69CC /* OtherSubscriber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherSubscriber.m; sourceTree = "<group>"; };
 		326F075B16CFDD69008A69CC /* StandardSubjectImplementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StandardSubjectImplementation.h; sourceTree = "<group>"; };
 		326F075C16CFDD6A008A69CC /* StandardSubjectImplementation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StandardSubjectImplementation.m; sourceTree = "<group>"; };
+		3297D8C516D0D7DE00DC1575 /* KVOSubject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVOSubject.h; sourceTree = "<group>"; };
+		3297D8C616D0D7DE00DC1575 /* KVOSubject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVOSubject.m; sourceTree = "<group>"; };
+		3297D8C816D0D7EF00DC1575 /* KVOObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVOObserver.h; sourceTree = "<group>"; };
+		3297D8C916D0D7EF00DC1575 /* KVOObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVOObserver.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,7 @@
 		326F072916CFCBE7008A69CC /* ObserverPattern */ = {
 			isa = PBXGroup;
 			children = (
+				3297D8C416D0D7C600DC1575 /* KVO Example */,
 				326F074616CFCBEC008A69CC /* Classes */,
 				326F073216CFCBE7008A69CC /* OPAppDelegate.h */,
 				326F073316CFCBE7008A69CC /* OPAppDelegate.m */,
@@ -132,6 +139,17 @@
 				326F075916CFD7F5008A69CC /* OtherSubscriber.m */,
 			);
 			name = Classes;
+			sourceTree = "<group>";
+		};
+		3297D8C416D0D7C600DC1575 /* KVO Example */ = {
+			isa = PBXGroup;
+			children = (
+				3297D8C516D0D7DE00DC1575 /* KVOSubject.h */,
+				3297D8C616D0D7DE00DC1575 /* KVOSubject.m */,
+				3297D8C816D0D7EF00DC1575 /* KVOObserver.h */,
+				3297D8C916D0D7EF00DC1575 /* KVOObserver.m */,
+			);
+			name = "KVO Example";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +225,8 @@
 				326F075716CFD7E3008A69CC /* SomeSubscriber.m in Sources */,
 				326F075A16CFD7F5008A69CC /* OtherSubscriber.m in Sources */,
 				326F075D16CFDD6A008A69CC /* StandardSubjectImplementation.m in Sources */,
+				3297D8C716D0D7DE00DC1575 /* KVOSubject.m in Sources */,
+				3297D8CA16D0D7EF00DC1575 /* KVOObserver.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,6 +349,7 @@
 				326F074516CFCBE7008A69CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
