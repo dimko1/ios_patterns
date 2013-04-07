@@ -9,7 +9,4 @@
 #import "OriginatorState.h"
 
 @implementation OriginatorState
-
-
-
 @end

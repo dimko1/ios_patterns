@@ -12,7 +12,6 @@
 
 -(NSInteger *) getTotalPrice:(int)sum
 {
-  //  return self.price + sum;
     return self.price + sum;}
 
 -(void) saveObject

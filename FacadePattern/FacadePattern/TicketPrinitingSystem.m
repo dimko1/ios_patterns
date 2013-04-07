@@ -20,5 +20,4 @@
     NSLog(@"Hmmm, ticket for travelling on the green dragon.Interesting...");
 }
 
-
 @end

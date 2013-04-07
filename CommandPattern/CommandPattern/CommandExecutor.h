@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "BaseCommand.h"
-
+//two methods:
 @interface CommandExecutor : NSObject
 {
 @private NSMutableArray *_arrayOfCommands;
+//private field
 @private NSInvocation *_specificCommand;
     
 }

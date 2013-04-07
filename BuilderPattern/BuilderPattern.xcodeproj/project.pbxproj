@@ -71,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				32A01A9416B5DB0800E74471 /* FactorySalesMan.h */,
+				32A01AA116B5DFEE00E74471 /* FactorySalesMan.m */,
 				32A01A9516B5DB0800E74471 /* AndroidPhone.m */,
 				32A01A9716B5DC6800E74471 /* BPAndroidPhoneBuilder.h */,
 				32A01A9816B5DC6800E74471 /* BPAndroidPhoneBuilder.m */,
@@ -78,7 +79,6 @@
 				32A01A9B16B5DDBF00E74471 /* LowPricePhoneBuilder.m */,
 				32A01A9D16B5DF8E00E74471 /* HighPricePhoneBuilder.h */,
 				32A01A9E16B5DF8E00E74471 /* HighPricePhoneBuilder.m */,
-				32A01AA116B5DFEE00E74471 /* FactorySalesMan.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";

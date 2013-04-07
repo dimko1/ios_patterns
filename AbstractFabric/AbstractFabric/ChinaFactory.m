@@ -13,7 +13,6 @@
 -(GenericIPad *) getIPad
 {
     ChinaPad *pad = [[ChinaPad alloc] init];
-    
     return pad;
 }
 
@@ -22,7 +21,5 @@
 {
     ChinaPhone *phone  = [[ChinaPhone alloc] init];
     return phone;
-
 }
-
 @end

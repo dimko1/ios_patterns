@@ -46,14 +46,17 @@
     
     //because kvoSubj will be deallocated after this functions ends we need to remove observer information.
     [kvoSubj removeObserver:kvoObserver forKeyPath:@"changeableProperty"];
+    
 
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view, typically from a nib.
 }
+
+
 
 - (void)didReceiveMemoryWarning
 {

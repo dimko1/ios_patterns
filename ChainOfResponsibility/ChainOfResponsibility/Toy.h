@@ -11,3 +11,4 @@
 @interface Toy : BasicItem
 
 @end
+//игрушка

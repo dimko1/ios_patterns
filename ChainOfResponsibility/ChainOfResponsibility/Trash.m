@@ -11,3 +11,4 @@
 @implementation Trash
 
 @end
+//базовый объект

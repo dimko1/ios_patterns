@@ -10,17 +10,17 @@
 
 @implementation SingletonObject
 
-/*+(SingletonObject *) singleton
-{
-    static SingletonObject *singletonObject = nil;
-    
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        singletonObject = [[self alloc] init];
-    });
-    
-    return singletonObject;
-}*/
+//+(SingletonObject *) singleton
+//{
+//    static SingletonObject *singletonObject = nil;
+//    
+//    static dispatch_once_t onceToken;
+//    dispatch_once(&onceToken, ^{
+//        singletonObject = [[self alloc] init];
+//    });
+//    
+//    return singletonObject;
+//}
 
 //no GDC Method
 //+(SingletonObject *) singleton

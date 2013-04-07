@@ -53,6 +53,7 @@ ShopWarehouse *shopWarehouse;
     };
     
     
+    
     [internallArrayCollection enumerateObjectsUsingBlock:simpleDimaSearchBlock];
 }
 - (IBAction)btnCustomEnumerationTest:(id)sender {

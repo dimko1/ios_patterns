@@ -10,7 +10,6 @@
 
 @interface FlyweightImageFactory : NSObject
 
-
 +(UIImage *) getImage:(NSString *)imageName;
 
 @end

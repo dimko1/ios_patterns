@@ -9,5 +9,4 @@
 #import "Product.h"
 
 @interface Dress : Product
-
 @end
