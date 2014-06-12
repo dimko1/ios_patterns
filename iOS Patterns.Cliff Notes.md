@@ -5,33 +5,31 @@ V1.1
 
 Дима Малеев
 
-### 
-Оглавление
+### Оглавление
 
-[Привет](#intro)
-[История изменений](#changelog)
-[Prototype](#prototype)
-[Factory Method](#factorymethod)
-[Abstract Factory](#abstractfactory)
-[Builder](#builder)
-[Singleton](#singleton)
-[Adapter](#adapter)
-[Bridge](#bridge)
-[Facade](#facade)
-[Mediator](#mediator)
-[Observer](#observer)
-[Composite](#composite)
-[Iterator](#iterator)
-[Visitor](#visitor)
-[Decorator](#decorator)
-[Chain of responsibility](#cor)
-[Template Method](#templatemethod)
-[Strategy](#strategy)
-[Command](#command)
-[Flyweight](#flyweight)
-[Proxy](#proxy)
-[Memento](#memento)
-
+* [Привет](#intro)
+* [История изменений](#changelog)
+* [Prototype](#prototype)
+* [Factory Method](#factorymethod)
+* [Abstract Factory](#abstractfactory)
+* [Builder](#builder)
+* [Singleton](#singleton)
+* [Adapter](#adapter)
+* [Bridge](#bridge)
+* [Facade](#facade)
+* [Mediator](#mediator)
+* [Observer](#observer)
+* [Composite](#composite)
+* [Iterator](#iterator)
+* [Visitor](#visitor)
+* [Decorator](#decorator)
+* [Chain of responsibility](#cor)
+* [Template Method](#templatemethod)
+* [Strategy](#strategy)
+* [Command](#command)
+* [Flyweight](#flyweight)
+* [Proxy](#proxy)
+* [Memento](#memento)
 
 ### <a name="intro"></a>Привет
 Привет, Друг! Очень мило, что ты решил прочитать эту книгу. Ну, или просто скачал, чтобы посмотреть, что тут находится. А находятся здесь просто примеры реализации паттернов GoF для iOS. Так как примеры писаны на Objective-C, вероятнее всего их можно использовать и для Mac, но так как я круче программы, чем “Hello, World!” под Mac не писал – то утверждать не могу.
@@ -50,17 +48,17 @@ V1.1
 
 Книга бесплатна :) Глупо писать другое, особенно если вы прочитали предыдущий пункт. Распространяться книга будет путем скачивания откуда угодно. Я не очень знаю, какие лицензии в ходу, да и в данном случае мне откровенно все равно. Потому, просто пару правил:
 
-1.	Книга не должна продаваться. Книга может только бесплатно распространяться в любом виде, но за просто так. Совсем.
-2.	Книгу можно перепечатывать, копировать себе в блог, отсылать голубиной почтой и даже менять имя автора. Если вспомните вашего покорного слугу – респект вам и уважуха, если нет – это тоже отлично, наверное, у вас была причина.
-3.	Естественно, автор не несет ответственности за те знания, которые вы тут получили :) Ну серьезно - делайте добро, вы ж не политики. 
-4.	Вы можете дописывать книгу, изменять в любом месте, но тогда будьте добры, меняйте автора.
-5.	Если вы поменяли контент книги, даже одну буковку – это уже ваша книга :) Наслаждайтесь! Вы стали автором!
-6.	Кстати да, менять можно все, кроме этих простых правил. 
-7.	После прочтения книги задумайтесь, какими знаниями можете поделиться вы. Вероятнее всего, вы можете рассказать уникальные и интересные вещи, которые поменяют что-то в этом мире! Пользуйтесь! Это ваша суперсила!
+1. Книга не должна продаваться. Книга может только бесплатно распространяться в любом виде, но за просто так. Совсем.
+2. Книгу можно перепечатывать, копировать себе в блог, отсылать голубиной почтой и даже менять имя автора. Если вспомните вашего покорного слугу – респект вам и уважуха, если нет – это тоже отлично, наверное, у вас была причина.
+3. Естественно, автор не несет ответственности за те знания, которые вы тут получили :) Ну серьезно - делайте добро, вы ж не политики. 
+4. Вы можете дописывать книгу, изменять в любом месте, но тогда будьте добры, меняйте автора.
+5. Если вы поменяли контент книги, даже одну буковку – это уже ваша книга :) Наслаждайтесь! Вы стали автором!
+6. Кстати да, менять можно все, кроме этих простых правил. 
+7. После прочтения книги задумайтесь, какими знаниями можете поделиться вы. Вероятнее всего, вы можете рассказать уникальные и интересные вещи, которые поменяют что-то в этом мире! Пользуйтесь! Это ваша суперсила!
 
 ### Напутственное слово
 
-Читайте. 
+Читайте.
 
 ### <a name="changelog"></a>История изменений
 Книга же не бумажная, потому имеет возможность меняться и эволюционировать! 
@@ -73,10 +71,10 @@ V1.1
 
 #### Когда использовать:
 
-1.	У нас есть семейство схожих объектов, разница между которыми только в состоянии их полей.
-2.	Чтобы создать объект вам надо пройти через огонь, воду и медные трубы. Особенно если этот объект состоит из еще одной кучи объектов, многие из которых для заполнения требуют подгрузку даных из базы, веб-сервисов и тому подобных источников. Часто легче скопировать объект и поменять несколько полей
-3.	Да и в принципе, нам особо и не важно, как создается объект. Ну есть и есть. 
-4.	Нам страшно лень писать иерархию фабрик (читай дальше), которые будут инкапсулировать всю противную работу создания объекта.
+1. У нас есть семейство схожих объектов, разница между которыми только в состоянии их полей.
+2. Чтобы создать объект вам надо пройти через огонь, воду и медные трубы. Особенно если этот объект состоит из еще одной кучи объектов, многие из которых для заполнения требуют подгрузку даных из базы, веб-сервисов и тому подобных источников. Часто легче скопировать объект и поменять несколько полей
+3. Да и в принципе, нам особо и не важно, как создается объект. Ну есть и есть. 
+4. Нам страшно лень писать иерархию фабрик (читай дальше), которые будут инкапсулировать всю противную работу создания объекта.
 
 Да, и есть еще частое заблуждение (вероятнее всего из названия) – прототип – это архитип, который никогда не должен использоваться, и служит только для создания себе подобных объектов. Хотя, протип, как архитип – тоже достаточно популярный кейс. Собственно, нам ничего не мешает делать прототипом любой объект, который у нас в подчинении.
 
@@ -102,34 +100,29 @@ Person *firstPerson = [[Person alloc] init];
 firstPerson.name = @"Dima";
 firstPerson.surname = @"Surname";
 Person *secondPerson = firstPerson;
-NSLog(@"First Person name  = %@ and surname = %@", 
-        firstPerson.name, firstPerson.surname);
+NSLog(@"First Person name  = %@ and surname = %@", firstPerson.name, firstPerson.surname);
 secondPerson.name = @"Roma";
-NSLog(@"Second Person name  = %@ and surname = %@", 
-        secondPerson.name, secondPerson.surname);
-NSLog(@"First Person name  = %@ and surname = %@", 
-        firstPerson.name, firstPerson.surname);
+NSLog(@"Second Person name  = %@ and surname = %@", secondPerson.name, secondPerson.surname);
+NSLog(@"First Person name  = %@ and surname = %@", firstPerson.name, firstPerson.surname);
 ```
 
 Как видим лог достаточно ожидаемый:
 
 >2013-01-21 01:31:20.986 PrototypePattern[1961:11303] First Person name  = Dima
->
 >2013-01-21 01:31:20.987 PrototypePattern[1961:11303] Second Person name  = Roma
->
 >2013-01-21 01:31:20.987 PrototypePattern[1961:11303] First Person name  = Roma
 
 Заметьте, что хоть и меняли мы имя для `secondPerson`, но и у `firstPerson` имя поменялось. Просто потому что мы создали два указателя на один и тот же объект.
 
 Для таких задач, стоит использовать глубокое копирование, которое в Objective-C сделано в принципе очень похоже как и в .NET:
 
-Для этого надо реализовать протокол NSCopying, и перегрузить:
+Для этого надо реализовать протокол `NSCopying`, и перегрузить:
 
 ``` objective-c
 -(id) copyWithZone:(NSZone *)zone;
 ```
 
-И да, не стоит переживать, что мы не реализуем метод `copy`. Он уже есть у класса `NSObject`. Если вызвать этот метод и не реализовать `copyWithZone`, то мы получем ошибку типа `NSInvalidArgumentException`.
+И да, не стоит переживать, что мы не реализуем метод `copy`. Он уже есть у класса `NSObject`. Если вызвать этот метод и не реализовать `copyWithZone`, то мы получим ошибку типа `NSInvalidArgumentException`.
 
 Потому интерфейс нашего объекта теперь будет выглядеть следующим образом:
 
@@ -169,21 +162,16 @@ Person *firstPerson = [[Person alloc] init];
 firstPerson.name = @"Dima";
 firstPerson.surname = @"Surname";
 Person *secondPerson = firstPerson;
-NSLog(@"First Person name  = %@ and surname = %@", 
-		firstPerson.name, firstPerson.surname);
+NSLog(@"First Person name  = %@ and surname = %@", firstPerson.name, firstPerson.surname);
 secondPerson.name = @"Roma";
-NSLog(@"Second Person name  = %@ and surname = %@", 
-		secondPerson.name, secondPerson.surname);
-NSLog(@"First Person name  = %@ and surname = %@", 
-firstPerson.name, firstPerson.surname);
+NSLog(@"Second Person name  = %@ and surname = %@", secondPerson.name, secondPerson.surname);
+NSLog(@"First Person name  = %@ and surname = %@", firstPerson.name, firstPerson.surname);
 ```
 
 Ну и, естественно, лог:
 
 >2013-01-21 01:48:36.538 PrototypePattern[2090:11303] First Person name  = Dima and surname = Surname
->
 >2013-01-21 01:48:36.539 PrototypePattern[2090:11303] Second Person name  = Roma and surname = Surname
->
 >2013-01-21 01:48:36.540 PrototypePattern[2090:11303] First Person name  = Dima and surname = Surname
 
 Как видим, мы в результате получили два независимых объекта, один из которых сделан по подобию первого.
@@ -196,8 +184,8 @@ firstPerson.name, firstPerson.surname);
 
 #### Когда использовать:
 
-1.	Мы не до конца уверены объект какого типа нам необходим.
-2.	Мы хотим чтобы не родительский объект решал какой тип создавать, а его наследники.
+1. Мы не до конца уверены объект какого типа нам необходим.
+2. Мы хотим чтобы не родительский объект решал какой тип создавать, а его наследники.
 
 #### Почему хорошо использовать:
 
@@ -266,7 +254,6 @@ firstPerson.name, firstPerson.surname);
 
 ``` objective-c
 @interface ProductGenerator : NSObject
-
 -(Product *) getProduct:(int)price;
 @end 
 
@@ -274,8 +261,7 @@ firstPerson.name, firstPerson.surname);
 
 -(Product *) getProduct:(int)price
 {
-    
-    if ( price > 0 && price < 100 )
+    if (price > 0 && price < 100)
     {
         Toy *p = [[Toy alloc] init];
         return p;
@@ -317,15 +303,10 @@ firstPerson.name, firstPerson.surname);
 Лог:
 
 >2013-01-23 23:27:54.223 FactoryMethodPattern[8833:11303] Saving object into Toys database
->
 >2013-01-23 23:27:54.226 FactoryMethodPattern[8833:11303] Saving object into Toys database
->
 >2013-01-23 23:27:54.226 FactoryMethodPattern[8833:11303] Saving object into Toys database
->
 >2013-01-23 23:27:54.227 FactoryMethodPattern[8833:11303] Saving object into Dress database
->
 >2013-01-23 23:27:54.227 FactoryMethodPattern[8833:11303] Saving object into Dress database
->
 >2013-01-23 23:27:54.228 FactoryMethodPattern[8833:11303] Saving object into Toys database
 
 [Код примера.][FactoryMethodPattern]
@@ -340,8 +321,8 @@ firstPerson.name, firstPerson.surname);
 
 #### Отличия от фабричного метода:
 
-1.	Фабричный метод порождает объекты одного и того же типа, фабрика же может создавать независимые объекты
-2.	Чтобы добавить новый тип объекта – надо поменять интерфейс фабрики, в фабричном методе же легко просто поменять внутренности метода, ответственный за порождение объектов.
+1. Фабричный метод порождает объекты одного и того же типа, фабрика же может создавать независимые объекты
+2. Чтобы добавить новый тип объекта – надо поменять интерфейс фабрики, в фабричном методе же легко просто поменять внутренности метода, ответственный за порождение объектов.
 
 Давайте представим ситуацию: у нас есть две фабрики по производству IPhone и IPad. Одна оригинальная, компании Apple, другая – хижина дядюшки Хуа. И вот, мы хотим производить эти товары: если в страны 3-го мира – то товар от дядюшки, в другие страны – товар любезно предоставлен компанией Apple.
 
@@ -379,7 +360,7 @@ firstPerson.name, firstPerson.surname);
 
 Но продукты немного отличаются.
 
-Пусть у нас есть два типа продуктов - оригинальные Apple и продукты, которые произведены трутолюбивым дядюшкой Хуа:
+Пусть у нас есть два типа продуктов - оригинальные Apple и продукты, которые произведены трудолюбивым дядюшкой Хуа:
 
 ``` objective-c
 @interface AppleIPhone : GenericIPhone
@@ -434,6 +415,7 @@ firstPerson.name, firstPerson.surname);
     return self;
 }
 @end
+
 //--------
  
 @interface ChinaPhone : GenericIPhone
@@ -489,7 +471,6 @@ firstPerson.name, firstPerson.surname);
     return pad;
 }
 
-
 -(GenericIPhone *) getIPhone
 {
     ChinaPhone *phone  = [[ChinaPhone alloc] init];
@@ -527,13 +508,11 @@ NSLog(@"IPhone named = %@, osname = %@", iphone.productName, iphone.osName);
 Лог будет выглядить следующим образом:
 
 >2013-01-26 20:00:56.663 AbstractFactory[13093:11303] IPad named = Buan Que Ipado Killa, osname = Windows CE, screensize = 12.5
->
 >2013-01-26 20:00:56.665 AbstractFactory [13093:11303] IPhone named = Chi Huan Hua Phone, osname = Android
 
 Теперь, просто поменяв значение переменной '_isThirdWorld' на 'false', и лог будет совсем другой:
 
 >2013-01-26 20:02:21.745 AbstractFactory [13115:11303] IPad named = IPad, osname = iOS, screensize = 7.7
->
 >2013-01-26 20:02:21.747 AbstractFactory [13115:11303] IPhone named = IPhone, osname = iOS
 
 [Код примера.][AbstractFabric]
@@ -544,8 +523,8 @@ NSLog(@"IPhone named = %@, osname = %@", iphone.productName, iphone.osName);
 
 #### Когда использовать:
 
-1.	Создание сложного объекта
-2.	Процесс создания объекта тоже очень нетривиальный – к примеру, получение данных из базы и манипуляция ими.
+1. Создание сложного объекта
+2. Процесс создания объекта тоже очень нетривиальный – к примеру, получение данных из базы и манипуляция ими.
 
 Сам паттерн состоит из двух компонент – Bulilder и Director. Builder занимается именно построением объекта, а Director знает какой Builder использовать, чтобы выдать необходимый продукт. Приступим!
 
@@ -737,12 +716,11 @@ NSLog(@"Phone Name = %@, osVersion = %@, cpu code name = %@, ram size = %@, os v
 _phone.name, _phone.osVersion, _phone.cpuCodeName, _phone.RAMsize, _phone.osVersionCode, _phone.launcher);
 ```
 
-Как видим, мы создали различных строителей, и, сказав директору ('FactorySalesMan') какой строитель мы хотим использовать, мы получаем тот девайс, который нам необходим:
+Как видим, мы создали различных строителей, и, сказав директору (`FactorySalesMan`) какой строитель мы хотим использовать, мы получаем тот девайс, который нам необходим:
 
 Традиционный лог:
 
 >2013-01-28 00:38:51.863 BuilderPattern[708:11303] Phone Name = Low price phone!, osVersion = Android 2.3, cpu code name = Some shitty CPU, ram size = 256, os version code = 3, launcher = Hia Tsung!
->
 >2013-01-28 00:38:51.867 BuilderPattern[708:11303] Phone Name = High price phone!, osVersion = Android 4.1, cpu code name = Some shitty but expensive CPU, ram size = 1024, os version code = 4.1, launcher = Samsung Launcher
 
 [Код примера.][BuilderPattern]
@@ -789,15 +767,15 @@ Singleton - это такой объект, который существует в системе только в единственном
 
 Собственно, вот и все :) iOS сам за нас позаботится о том, чтобы создан был только один экземпляр нашего объекта. Тут стоит сделать шаг назад и описать проблему, которая является головной болью любого, кто более-менее близко работал с потоками:
 
-1.	Представьте, что есть 2 потока.
-2.	И тут каждый, одновременно создает singleton. Вроде бы и должен создаться только один объект, но потому что все происходит в один момент – бывают случаи, когда создается два объекта. 
+1. Представьте, что есть 2 потока.
+2. И тут каждый, одновременно создает singleton. Вроде бы и должен создаться только один объект, но потому что все происходит в один момент – бывают случаи, когда создается два объекта. 
 
 "Но ведь можно сделать проверку на nil!" – скажете Вы.
 
 А теперь, представьте более сложную ситуацию: объекта singleton не существует. Два потока хотят его создать одновременно:
 
-1.	Поток 1 делает проверку или объект существует. Видит, что его нет, и проходит этап проверки.
-2.	Поток 2 делает проверку на существование объекта, и хоть и поток 1 проверку УЖЕ прошел, но объект ЕЩЕ не существует.
+1. Поток 1 делает проверку или объект существует. Видит, что его нет, и проходит этап проверки.
+2. Поток 2 делает проверку на существование объекта, и хоть и поток 1 проверку УЖЕ прошел, но объект ЕЩЕ не существует.
 
 Для решения таких проблем, в .NET использовали locks – блокирование кода, для других потоков, пока он исполняется в каком – либо потоке. Собственно, dispatch_once делает тоже самое – он просто синхронный :) Потому, ни один поток не может зайти в этот код, пока он занят.
 
@@ -866,9 +844,9 @@ NSLog(@"%@", [[SingletonObject singleton] tempProperty]);
 
 В нашей с вами проблеме:
 
-1.	Target – ноутбук со старой зарядкой
-2.	Adapter – переходник. 
-3.	Adaptee – розетка с квадртаными дырками.
+1. Target – ноутбук со старой зарядкой
+2. Adapter – переходник. 
+3. Adaptee – розетка с квадртаными дырками.
 
 Имплементаций паттерна Адаптер в Objective-C может быть 2 (вероятно даже больше, но я вижу две):
 
@@ -984,11 +962,8 @@ RavenAdapter *ravenAdapter = [[RavenAdapter alloc] initWithRaven:simpleRaven];
 Результат можно легко увидеть в логе:
 
 >2013-02-03 15:43:14.447 AdapterPattern[5985:11303] OMG! I am flying!
->
 >2013-02-03 15:43:14.449 AdapterPattern[5985:11303] Tew-tew-tew
->
 >2013-02-03 15:43:14.449 AdapterPattern[5985:11303] I am flying and seak for killing!
->
 >2013-02-03 15:43:14.450 AdapterPattern[5985:11303] Kaaaar-kaaaaar-kaaaaaaar!
 
 Теперь более сложная реализация, которая все еще зависит от протоколов, но уже использует делегацию. Вернемся к нашему несчастному ноутбуку и зарядке:
@@ -1139,11 +1114,8 @@ USANotebookEuropeanAdapter *adapter =
 Лог нам выведет:
 
 >2013-02-03 15:57:42.624 AdapterPattern[6179:11303] Charging with 220 and round holes!
->
 >2013-02-03 15:57:42.626 AdapterPattern[6179:11303] C’mon I am charging
->
 >2013-02-03 15:57:42.626 AdapterPattern[6179:11303] Charge Notebook Rect Holes
->
 >2013-02-03 15:57:42.627 AdapterPattern[6179:11303] C’mon I am charging
 
 [Код примера.][AdapterPattern]
@@ -1154,11 +1126,11 @@ USANotebookEuropeanAdapter *adapter =
 
 Собственно, Мост (Bridge) позволяет разделить абстракцию от реализации, так чтобы реализация в любой момент могла быть изменена, не меняя при этом абстракции.
 
-Когда использовать?
+#### Когда использовать?
 
-1.	Вам совершенно не нужна связь между абстракцией и реализацией.
-2.	Собственно, как абстракцию так и имплементацию могут наследовать независимо.
-3.	Вы не хотите, чтобы изменения в реализации имели влияние на клиентский код.
+1. Вам совершенно не нужна связь между абстракцией и реализацией.
+2. Собственно, как абстракцию так и имплементацию могут наследовать независимо.
+3. Вы не хотите, чтобы изменения в реализации имели влияние на клиентский код.
 
 Давайте создадим теперь базовую абстракцию наушников:
 
@@ -1170,7 +1142,7 @@ USANotebookEuropeanAdapter *adapter =
 
 @end
 ```
-	
+
 И теперь два элемента – дорогие наушники и дешевые :)
 
 ``` objective-c
@@ -1252,19 +1224,12 @@ p.headPhones = ep;
 И конечно же log:
 
 >2013-02-06 23:03:52.378 BridgePattern[3397:c07] puf – puf – pufhrrr
->
 >2013-02-06 23:03:52.379 BridgePattern[3397:c07] puf – puf – pufhrrr
->
 >2013-02-06 23:03:52.380 BridgePattern[3397:c07] beep – beep – bhhhrhrhrep
->
 >2013-02-06 23:03:52.380 BridgePattern[3397:c07] beep – beep – bhhhrhrhrep
->
 >2013-02-06 23:03:52.380 BridgePattern[3397:c07] Bam-Bam-Bam
->
 >2013-02-06 23:03:52.381 BridgePattern[3397:c07] Bam-Bam-Bam
->
 >2013-02-06 23:03:52.381 BridgePattern[3397:c07] Beep-Beep-Beep Taram – Rararam
->
 >2013-02-06 23:03:52.381 BridgePattern[3397:c07] Beep-Beep-Beep Taram – Rararam
 
 [Код примера.][BridgePattern]
@@ -1275,9 +1240,9 @@ p.headPhones = ep;
 
 К примеру, чтобы пойти в кино нам надо:
 
-1.	Посмотреть расписание фильмов, выбрать фильм, посмотреть когда есть сеансы, посмотреть когда у нас есть время.
-2.	Необходимо купить билет, для этого ввести номер карточки, секретный код, дождаться снятия денег, распечатать билет.
-3.	Приехать в кинотеатр, запарковать машину, купить попкорн, найти места, смотреть.
+1. Посмотреть расписание фильмов, выбрать фильм, посмотреть когда есть сеансы, посмотреть когда у нас есть время.
+2. Необходимо купить билет, для этого ввести номер карточки, секретный код, дождаться снятия денег, распечатать билет.
+3. Приехать в кинотеатр, запарковать машину, купить попкорн, найти места, смотреть.
 
 И все это для того, чтобы просто посмотреть фильм, который нам, очень вероятно, не понравится.
 
@@ -1415,19 +1380,12 @@ TravellSystemFacade *facade = [[TravellSystemFacade alloc] init];
 Давайте посмотрим лог:
 
 >2013-02-09 17:46:28.442 FacadePattern[2410:c07] Finding your location. Hmmm, here you are!
->
 >2013-02-09 17:46:28.444 FacadePattern[2410:c07] So you wanna travell to Lviv
->
 >2013-02-09 17:46:28.445 FacadePattern[2410:c07] Okay, to travell to this location we are using google maps….
->
 >2013-02-09 17:46:28.446 FacadePattern[2410:c07] Okay, to travell there you will probabply need dragon!Arghhhhh
->
 >2013-02-09 17:46:28.446 FacadePattern[2410:c07] Maaaam, can I order a dragon?… Yes… Yes, green one… Yes, with fire!… No, not a dragon of death… Thank you!
->
 >2013-02-09 17:46:28.447 FacadePattern[2410:c07] Connecting to our ticketing system…
->
 >2013-02-09 17:46:28.447 FacadePattern[2410:c07] Hmmm, ticket for travelling on the green dragon.Interesting…
->
 >2013-02-09 17:46:28.448 FacadePattern[2410:c07] Maaan, you are flying on dragon!
 
 [Код примера.][FacadePattern]
@@ -1437,9 +1395,9 @@ TravellSystemFacade *facade = [[TravellSystemFacade alloc] init];
 
 #### Когда стоит использовать:
 
-1.	Когда у вас есть некоторое количество объектов, и очень тяжело реализовать взаимодействие между ними. Яркий пример – умный дом. Однозначно есть неколько датчиков, и несколько устройств. К примеру, датчик температуры следит за тем, какая на данный момент температура, а кондиционер умеет охлаждать воздух. Причем кондиционер не обязательно знает о существовании датичка температуры. Есть центральный компьютер, который получает сигналы от каждого из устройств и понимает, что делать в том или ином случае.
-2.	Тяжело повторно использовать объект, так как он взаимодействует и коммуницирует с огромным количеством других объектов.
-3.	Логика взаимодействия должна легко настраиваться и расширяться.
+1. Когда у вас есть некоторое количество объектов, и очень тяжело реализовать взаимодействие между ними. Яркий пример – умный дом. Однозначно есть неколько датчиков, и несколько устройств. К примеру, датчик температуры следит за тем, какая на данный момент температура, а кондиционер умеет охлаждать воздух. Причем кондиционер не обязательно знает о существовании датичка температуры. Есть центральный компьютер, который получает сигналы от каждого из устройств и понимает, что делать в том или ином случае.
+2. Тяжело повторно использовать объект, так как он взаимодействует и коммуницирует с огромным количеством других объектов.
+3. Логика взаимодействия должна легко настраиваться и расширяться.
 
 Собственно, пример медиатора даже писать бессмысленно, потому как это любой контроллер который мы используем во время нашей разработки. Посудите сами – на view есть очень много контролов, и все правила взаимодействия мы прописываем в контроллере. Элементарно.
 
@@ -1571,25 +1529,23 @@ proccessor._thermometer = therm;
 И конечно же лог:
 
 >2013-02-12 18:45:06.790 MediatorPattern[8809:c07] Value changed! We need to do smth!
->
 >2013-02-12 18:45:06.793 MediatorPattern[8809:c07] Oh, the change is temperature
->
 >2013-02-12 18:45:06.793 MediatorPattern[8809:c07] Conditioning…
 
 [Код примера.][MediatorPattern]
 
 ## <a name="observer"></a>Observer
 
-Что такое паттерн Observer? Вот вы когда-нибудь подписывались на газету? Вы подписываетесь, и каждый раз, когда выходит новый номер газеты, вы получаете ее к своему дому. Вы никуда не ходите, просто даете информацию про себя, и организация, которая выпускает газету, сама знает, куда и какую газету отнести. Второе название этого паттерна – Publish – Subscriber.
+Что такое паттерн Observer? Вот вы когда-нибудь подписывались на газету? Вы подписываетесь, и каждый раз, когда выходит новый номер газеты, вы получаете ее к своему дому. Вы никуда не ходите, просто даете информацию про себя, и организация, которая выпускает газету, сама знает, куда и какую газету отнести. Второе название этого паттерна – **Publish – Subscriber**.
 
 Как описывает этот паттерн наша любимая GoF книга – Observer определяет одно-ко-многим отношение между объектами, и если изменения происходят в объекте – все подписанные на него объекты тут же узнают про это изменение.
 
-Идея проста: объект, который мы называем Subject, дает возможность другим объектам, которые реализуют интерфейс Observer, подписываться и отписываться от изменений, происходящих в Subject. Когда изменение происходит – всем заинтересованным объектам высылается сообщение, что изменение произошло. В нашем случае – Subject – это издатель газеты, Observer - это мы с вами – те кто подписывается на газету, ну и собсвтенно изменение – это выход новой газеты, а оповещение – отправка газеты всем подписчикам.
+Идея проста: объект, который мы называем Subject, дает возможность другим объектам, которые реализуют интерфейс Observer, подписываться и отписываться от изменений, происходящих в Subject. Когда изменение происходит – всем заинтересованным объектам высылается сообщение, что изменение произошло. В нашем случае – Subject – это издатель газеты, Observer - это мы с вами – те кто подписывается на газету, ну и собственно изменение – это выход новой газеты, а оповещение – отправка газеты всем подписчикам.
 
 #### Когда используется паттерн:
 
-1.	Когда Вам необходимо сообщить всем объектам, подписанным на изменения, что изменение произошло, при этом вы не знаете типы этих объектов.
-2.	Изменения в одном объекте требуют, чтобы состояние изменилось в других объектах, причем количество объектов может быть разное.
+1. Когда Вам необходимо сообщить всем объектам, подписанным на изменения, что изменение произошло, при этом вы не знаете типы этих объектов.
+2. Изменения в одном объекте требуют, чтобы состояние изменилось в других объектах, причем количество объектов может быть разное.
 
 Реализация этого паттерна возможна двумя способами:
 
@@ -1664,7 +1620,6 @@ NSNotificationCenter * notificationCenter = [NSNotificationCenter defaultCenter]
     return _observerCollection;
 }
 
-
 -(void) addObserver:(id<StandardObserver>)observer
 {
     [self.observerCollection addObject:observer];
@@ -1735,7 +1690,6 @@ OtherSubscriber *otherSubscriber = [[OtherSubscriber alloc] init];
 И естественно log:
 
 >2013-02-16 17:31:43.176 ObserverPattern[24332:c07] And some subscriber tells: Hmm, value strange value changed to newValue
->
 >2013-02-16 17:31:43.177 ObserverPattern[24332:c07] And some another subscriber tells: Hmm, value strange value changed to newValue
 
 Ну и конечно же без использования KVO описание паттерна выглядило бы неполным.
@@ -1816,7 +1770,7 @@ KVOObserver *kvoObserver = [[KVOObserver alloc] init];
 
 Именно для хранения таких типов данных, а вернее их организации, используется паттерн – Композит.
 
-Когда использовать такой паттерн?
+#### Когда использовать такой паттерн?
 
 Собственно когда вы работаете с древовидными типами данных, или хотите отобразить иерархию данных таким образом.
 
@@ -1910,48 +1864,38 @@ KVOObserver *kvoObserver = [[KVOObserver alloc] init];
 Теперь, конечно же пример:
 
 ``` objective-c
-    Container *rootContainer = [[Container alloc] init];
-    LeafObject *object = [[LeafObject alloc] init];
-    object.leafValue = @"level1 value";
-    [rootContainer addComponent:object];
-    
-    Container *firstLevelContainer1 = [[Container alloc] init];
-    LeafObject *object2 = [[LeafObject alloc] init];
-    object2.leafValue = @"level2 value";
-    [firstLevelContainer1 addComponent:object2];
-    [rootContainer addComponent:firstLevelContainer1];
-    
-    Container *firstLevelContainer2 = [[Container alloc] init];
-    LeafObject *object3 = [[LeafObject alloc] init];
-    object3.leafValue = @"level2 value 2";
-    [firstLevelContainer2 addComponent:object3];
-    [rootContainer addComponent:firstLevelContainer2];
-    
-    
-    NSLog(@"%@", rootContainer.getData);
+Container *rootContainer = [[Container alloc] init];
+LeafObject *object = [[LeafObject alloc] init];
+object.leafValue = @"level1 value";
+[rootContainer addComponent:object];
+
+Container *firstLevelContainer1 = [[Container alloc] init];
+LeafObject *object2 = [[LeafObject alloc] init];
+object2.leafValue = @"level2 value";
+[firstLevelContainer1 addComponent:object2];
+[rootContainer addComponent:firstLevelContainer1];
+
+Container *firstLevelContainer2 = [[Container alloc] init];
+LeafObject *object3 = [[LeafObject alloc] init];
+object3.leafValue = @"level2 value 2";
+[firstLevelContainer2 addComponent:object3];
+[rootContainer addComponent:firstLevelContainer2];
+
+NSLog(@"%@", rootContainer.getData);
 ```
 
 И конечно же лог:
 
 >2013-02-17 13:04:09.470 CompositePattern[27392:c07]
->
-><ContainerValues>
->
->	<level1 value/>
->
->	<ContainerValues>
->
->		<level2 value/>
->
->	</ContainerValues>
->
->	<ContainerValues>
->
->		<level2 value 2/>
->
->	</ContainerValues>
->
-></ContainerValues>
+>&lt;ContainerValues&gt;
+>    &lt;level1 value/&gt;
+>    &lt;ContainerValues&gt;
+>        &lt;level2 value/&gt;
+>    &lt;/ContainerValues&gt;
+>    &lt;ContainerValues&gt;
+>        &lt;level2 value 2/&gt;
+>    &lt;/ContainerValues&gt;
+>&lt;/ContainerValues&gt;
 
 [Код примера.][CompositePattern]
  
@@ -1963,15 +1907,15 @@ KVOObserver *kvoObserver = [[KVOObserver alloc] init];
 
 При внешнем итераторе, клиенту надо:
 
-1.	Вообще знать про существование итератора, хоть это и дает больше контроля.
-2.	Создавать и управлять итератором.
-3.	Можно использовать различные итераторы, для различных алгоритмов итерации.
+1. Вообще знать про существование итератора, хоть это и дает больше контроля.
+2. Создавать и управлять итератором.
+3. Можно использовать различные итераторы, для различных алгоритмов итерации.
 
 При внутреннем:
 
-1.	Клиенту совершенно неизвестно о существовании итератора. Он просто дергает интерфейс коллекции.
-2.	Коллекция сама создает и управляет итератором
-3.	Коллекция может менять различные итераторы, не трогая при этом код клиента.
+1. Клиенту совершенно неизвестно о существовании итератора. Он просто дергает интерфейс коллекции.
+2. Коллекция сама создает и управляет итератором
+3. Коллекция может менять различные итераторы, не трогая при этом код клиента.
 
 #### Когда использовать итератор:
 
@@ -2016,18 +1960,18 @@ KVOObserver *kvoObserver = [[KVOObserver alloc] init];
 Радость этого метода в том, что сам алгоритм итерации может написать другой программист, вам же необходимо будет только использовать блок, написанный этим программистом. Все выглядит приблизительно так:
 
 ``` objective-c
-    //создание блока поиска Dima в массиве строчек
-    void (^simpleDimaSearchBlock)(id, NSUInteger, BOOL*) =
-    ^(id obj, NSUInteger idx, BOOL *stop){
+//создание блока поиска Dima в массиве строчек
+void (^simpleDimaSearchBlock)(id, NSUInteger, BOOL*) =
+    ^(id obj, NSUInteger idx, BOOL *stop)
+    {
         if([obj localizedCaseInsensitiveCompare:@"Dima"] == NSOrderedSame)
         {
             NSLog(@"Dima has been found!");
             *stop = YES;
         }
     };
-    
- 
-   [internallArrayCollection enumerateObjectsUsingBlock:simpleDimaSearchBlock];
+
+[internallArrayCollection enumerateObjectsUsingBlock:simpleDimaSearchBlock];
 ```
 
 Приятно же:)
@@ -2132,7 +2076,7 @@ KVOObserver *kvoObserver = [[KVOObserver alloc] init];
 {
     self = [super init];
     itemsArray = [[NSMutableArray alloc] init];
-    for ( ItemInShop *item in anItems)
+    for (ItemInShop *item in anItems)
     {
         if (item.isBroken)
             [itemsArray addObject:item];
@@ -2165,40 +2109,37 @@ if (!item.isBroken)
 Ну что, тестим:
 
 ``` objective-c
-//создание тестовых даных
-    shopWarehouse = [[ShopWarehouse alloc] init];
-    
-    [shopWarehouse addItem:[[ItemInShop alloc]initWithArgs:@"Item1" andQaulity:NO]];
-    [shopWarehouse addItem:[[ItemInShop alloc]initWithArgs:@"Item2" andQaulity:NO]];
-    [shopWarehouse addItem:[[ItemInShop alloc]initWithArgs:@"Item3" andQaulity:YES]];
-    [shopWarehouse addItem:[[ItemInShop alloc]initWithArgs:@"Item4" andQaulity:YES]];
-    [shopWarehouse addItem:[[ItemInShop alloc]initWithArgs:@"Item5" andQaulity:NO]];
+//создание тестовых данных
+shopWarehouse = [[ShopWarehouse alloc] init];
+
+[shopWarehouse addItem:[[ItemInShop alloc]initWithArgs:@"Item1" andQaulity:NO]];
+[shopWarehouse addItem:[[ItemInShop alloc]initWithArgs:@"Item2" andQaulity:NO]];
+[shopWarehouse addItem:[[ItemInShop alloc]initWithArgs:@"Item3" andQaulity:YES]];
+[shopWarehouse addItem:[[ItemInShop alloc]initWithArgs:@"Item4" andQaulity:YES]];
+[shopWarehouse addItem:[[ItemInShop alloc]initWithArgs:@"Item5" andQaulity:NO]];
 ```
 
 Сам тест:
 
 ``` objective-c
-    GoodItemsEnumerator *goodIterator = [shopWarehouse getGoodItemsEnumerator];
-    BadItemsEnumerator *badIterator = [shopWarehouse getBrokenItemsEnumerator];
+GoodItemsEnumerator *goodIterator = [shopWarehouse getGoodItemsEnumerator];
+BadItemsEnumerator *badIterator = [shopWarehouse getBrokenItemsEnumerator];
+
+ItemInShop *element;
+while (element = [goodIterator nextObject]) {
+    NSLog(@"Good Item = %@", element.name);
+}
     
-    ItemInShop *element;
-    while (element = [goodIterator nextObject]) {
-        NSLog(@"Good Item = %@", element.name);
-    }
-    
-    while (element = [badIterator nextObject]) {
-        NSLog(@"Bad Item = %@", element.name);
+while (element = [badIterator nextObject]) {
+    NSLog(@"Bad Item = %@", element.name);
+}
 ```
 
 И конечно же лог:
 >2013-02-25 01:18:10.401 IteratorPattern[5000:c07] Good Item = Item1
->
 >2013-02-25 01:18:10.403 IteratorPattern[5000:c07] Good Item = Item2
->
 >2013-02-25 01:18:10.403 IteratorPattern[5000:c07] Good Item = Item5
->
 >2013-02-25 01:18:10.404 IteratorPattern[5000:c07] Bad Item = Item3
->
 >2013-02-25 01:18:10.405 IteratorPattern[5000:c07] Bad Item = Item4
 
 [Код примера.][IteratorPattern]
@@ -2210,11 +2151,11 @@ if (!item.isBroken)
 
 #### Когда мы захотим использовать этот паттерн:
 
-1.	Когда у нас есть сложный объект, в котором содержится большое количество различных элементов, и вы хотите выполнять различные операции в зависимости от типа этих элиментов.
-2.	Вам необходимо выполнять различные операции над класами, и при этом Вы не хотите писать вагон кода внутри реализации этих классов.
-3.	В конце концов, вам нужно добавлять различные операции над элементами, и вы не хотите постоянно обновлять классы этих элементов.
+1. Когда у нас есть сложный объект, в котором содержится большое количество различных элементов, и вы хотите выполнять различные операции в зависимости от типа этих элиментов.
+2. Вам необходимо выполнять различные операции над класами, и при этом Вы не хотите писать вагон кода внутри реализации этих классов.
+3. В конце концов, вам нужно добавлять различные операции над элементами, и вы не хотите постоянно обновлять классы этих элементов.
 
-Чтож, давайте вернемся к примеру из прошлой статьи, только теперь сложнее – у нас есть несколько складов, в каждом складе может храниться товар. Один визитер будет смотреть склады, другой визитер будет называть цену товара в складе.
+Что ж, давайте вернемся к примеру из прошлой статьи, только теперь сложнее – у нас есть несколько складов, в каждом складе может храниться товар. Один визитер будет смотреть склады, другой визитер будет называть цену товара в складе.
 
 Итак, для начала сам товар:
 
@@ -2248,7 +2189,7 @@ if (!item.isBroken)
 ``` objective-c
 @interface Warehouse : NSObject
 {
-@private NSMutableArray *_itemsArray;
+    @private NSMutableArray *_itemsArray;
 }
 
 -(void) addItem:(WarehouseItem *) anItem;
@@ -2313,13 +2254,12 @@ if (!item.isBroken)
         NSLog(@"Hmmm, nice warehouse!");
         return;
     }
-
 }
 
 @end
 ```
 
-Если почитать код, то сразу видно, что визитер при вызове своего метода visit определяет тип объекта, который ему передался, и выполняет определенные функции в зависимоти от этого типа. Данный объект просто говорит хороша или поломана вещь на складе, а так же что ему нравится склад:)
+Если почитать код, то сразу видно, что визитер при вызове своего метода visit определяет тип объекта, который ему передался, и выполняет определенные функции в зависимости от этого типа. Данный объект просто говорит хороша или поломана вещь на складе, а так же что ему нравится склад:)
 
 ``` objective-c
 @interface PriceCheckerVisitor : NSObject <BasicVisitor>
@@ -2351,69 +2291,50 @@ if (!item.isBroken)
 Теперь давайте запустим то, что у нас получилось! Код генерации тестовых даных:
 
 ``` objective-c
-    _localWarehouse = [[Warehouse alloc] init];
-    [_localWarehouse addItem:[[WarehouseItem alloc] initWithArgs:@"Item1" andQuality:NO andPrice:25]];
-    [_localWarehouse addItem:[[WarehouseItem alloc] initWithArgs:@"Item2" andQuality:NO andPrice:32]];
-    [_localWarehouse addItem:[[WarehouseItem alloc] initWithArgs:@"Item3" andQuality:YES andPrice:45]];
-    [_localWarehouse addItem:[[WarehouseItem alloc] initWithArgs:@"Item4" andQuality:NO andPrice:33]];
-    [_localWarehouse addItem:[[WarehouseItem alloc] initWithArgs:@"Item5" andQuality:NO andPrice:12]];
-    [_localWarehouse addItem:[[WarehouseItem alloc] initWithArgs:@"Item6" andQuality:YES andPrice:78]];
-    [_localWarehouse addItem:[[WarehouseItem alloc] initWithArgs:@"Item7" andQuality:YES andPrice:34]];
-    [_localWarehouse addItem:[[WarehouseItem alloc] initWithArgs:@"Item8" andQuality:NO andPrice:51]];
-    [_localWarehouse addItem:[[WarehouseItem alloc] initWithArgs:@"Item9" andQuality:NO andPrice:25]];
+_localWarehouse = [[Warehouse alloc] init];
+[_localWarehouse addItem:[[WarehouseItem alloc] initWithArgs:@"Item1" andQuality:NO andPrice:25]];
+[_localWarehouse addItem:[[WarehouseItem alloc] initWithArgs:@"Item2" andQuality:NO andPrice:32]];
+[_localWarehouse addItem:[[WarehouseItem alloc] initWithArgs:@"Item3" andQuality:YES andPrice:45]];
+[_localWarehouse addItem:[[WarehouseItem alloc] initWithArgs:@"Item4" andQuality:NO andPrice:33]];
+[_localWarehouse addItem:[[WarehouseItem alloc] initWithArgs:@"Item5" andQuality:NO andPrice:12]];
+[_localWarehouse addItem:[[WarehouseItem alloc] initWithArgs:@"Item6" andQuality:YES andPrice:78]];
+[_localWarehouse addItem:[[WarehouseItem alloc] initWithArgs:@"Item7" andQuality:YES andPrice:34]];
+[_localWarehouse addItem:[[WarehouseItem alloc] initWithArgs:@"Item8" andQuality:NO andPrice:51]];
+[_localWarehouse addItem:[[WarehouseItem alloc] initWithArgs:@"Item9" andQuality:NO andPrice:25]];
 ```
 
 И собственно сам тестовый код:
 
 ``` objective-c
-    PriceCheckerVisitor *visitor = [[PriceCheckerVisitor alloc] init];
-    QualityCheckerVisitor *qualityVisitor = [[QualityCheckerVisitor alloc] init];
-    
-    [_localWarehouse accept:visitor];
-    [_localWarehouse accept:qualityVisitor];
+PriceCheckerVisitor *visitor = [[PriceCheckerVisitor alloc] init];
+QualityCheckerVisitor *qualityVisitor = [[QualityCheckerVisitor alloc] init];
+
+[_localWarehouse accept:visitor];
+[_localWarehouse accept:qualityVisitor];
 ```
 
 Итак, при вызове метода accept нашего склада, визитер сначала проведывает наш склад, а потом проведывает каждый товар на этом складе. При этом мы можем менять как визитера так и алгоритм, и это не повлечет изменения в коде клиента:)
 Традиционный лог:
 
 >2013-02-26 00:19:47.756 VisitorPattern[8748:c07] Hmmm, I don’t know how much Warehouse costs!
->
 >2013-02-26 00:19:47.759 VisitorPattern[8748:c07] Item: Item1 have price = 25
->
 >2013-02-26 00:19:47.759 VisitorPattern[8748:c07] Item: Item2 have price = 32
->
 >2013-02-26 00:19:47.760 VisitorPattern[8748:c07] Item: Item3 have price = 45
->
 >2013-02-26 00:19:47.761 VisitorPattern[8748:c07] Item: Item4 have price = 33
->
 >2013-02-26 00:19:47.762 VisitorPattern[8748:c07] Item: Item5 have price = 12
->
 >2013-02-26 00:19:47.763 VisitorPattern[8748:c07] Item: Item6 have price = 78
->
 >2013-02-26 00:19:47.763 VisitorPattern[8748:c07] Item: Item7 have price = 34
->
 >2013-02-26 00:19:47.764 VisitorPattern[8748:c07] Item: Item8 have price = 51
->
 >2013-02-26 00:19:47.765 VisitorPattern[8748:c07] Item: Item9 have price = 25
->
 >2013-02-26 00:19:47.765 VisitorPattern[8748:c07] Hmmm, nice warehouse!
->
 >2013-02-26 00:19:47.766 VisitorPattern[8748:c07] Item: Item1 is pretty cool!
->
 >2013-02-26 00:19:47.767 VisitorPattern[8748:c07] Item: Item2 is pretty cool!
->
 >2013-02-26 00:19:47.767 VisitorPattern[8748:c07] Item: Item3 is broken
->
 >2013-02-26 00:19:47.768 VisitorPattern[8748:c07] Item: Item4 is pretty cool!
->
 >2013-02-26 00:19:47.769 VisitorPattern[8748:c07] Item: Item5 is pretty cool!
->
 >2013-02-26 00:19:47.837 VisitorPattern[8748:c07] Item: Item6 is broken
->
 >2013-02-26 00:19:47.837 VisitorPattern[8748:c07] Item: Item7 is broken
->
 >2013-02-26 00:19:47.837 VisitorPattern[8748:c07] Item: Item8 is pretty cool!
->
 >2013-02-26 00:19:47.838 VisitorPattern[8748:c07] Item: Item9 is pretty cool!
 
 [Код примера.][VisitorPattern]
@@ -2429,13 +2350,13 @@ if (!item.isBroken)
 
 Когда использовать этот паттерн:
 
-1.	Вы хотите добавить определенному объекту дополнительные возможности, при этом не задевая и не меняя других объектов
-2.	Дополнительные возможности класса – опциональны
+1. Вы хотите добавить определенному объекту дополнительные возможности, при этом не задевая и не меняя других объектов
+2. Дополнительные возможности класса – опциональны
 
 Радость Objective-C в даном случае – это использование категорий. Я не буду детально описывать категории в этой книге, но в двух словах все же расскажу:
 Категории – это возможность расширить любой объект дополнительными методами (ТОЛЬКО МЕТОДАМИ) без унаследования от него. Давайте возьмем супер простой пример – декорирование Cocoa классов. К примеру добавим новый метод для объекта NSDate:
 
-К примеру, нам нужно иметь возможность любую дату в нашем приложении как то определенно отформатировать и получить в виде строчки. Для начала создадим категорию:
+К примеру, нам нужно иметь возможность любую дату в нашем приложении как-то определенно отформатировать и получить в виде строчки. Для начала создадим категорию:
 
 ``` objective-c
 @interface NSDate (StringDate)
@@ -2473,9 +2394,9 @@ if (!item.isBroken)
 Вы будете смеяться, но в принципе вот и все:) Примерный код тестирования выглядит следующим образом:
 
 ``` objective-c
-    NSDate *dateNow = [NSDate date];
-    
-    NSLog(@"Date is %@", [dateNow convertDateToString]);
+NSDate *dateNow = [NSDate date];
+
+NSLog(@"Date is %@", [dateNow convertDateToString]);
 ```
 
 Традиционный log:
@@ -2492,10 +2413,10 @@ if (!item.isBroken)
 
 Цепочка ответственности (chain of responsibility) – позволяет вам передавать объект по цепочке объектов-обработчиков, пока не будет найден необходимый объект-обработчик.
 
-Когда использовать этот паттерн:
+#### Когда использовать этот паттерн:
 
-1.	У вас более чем один объект-обработчик.
-2.	У вас есть несколько объектов обработчика, при этом вы не хотите специфицировать который объект должен обрабатывать в даный момент времени.
+1. У вас более чем один объект-обработчик.
+2. У вас есть несколько объектов обработчика, при этом вы не хотите специфицировать который объект должен обрабатывать в даный момент времени.
 
 Как всегда – пример:
 
@@ -2618,35 +2539,29 @@ if (!item.isBroken)
 Давайте тестировать:
 
 ``` objective-c
-    BasicHandler *toysHandler = [[ToysHandler alloc] init];
-    BasicHandler *electronicsHandler = [[ElectronicsHandler alloc] init];
-    BasicHandler *otherItemHandler = [[OtherItemsHandler alloc]init];
-    
-    electronicsHandler.nextHandler = otherItemHandler;
-    toysHandler.nextHandler = electronicsHandler;
-    
-    BasicItem *toy = [[Toy alloc] init];
-    BasicItem *electronic = [[Electronics alloc] init];
-    BasicItem *trash = [[Trash alloc] init];
-    
-    
-    [toysHandler handleItem:toy];
-    [toysHandler handleItem:electronic];
-    [toysHandler handleItem:trash];
+BasicHandler *toysHandler = [[ToysHandler alloc] init];
+BasicHandler *electronicsHandler = [[ElectronicsHandler alloc] init];
+BasicHandler *otherItemHandler = [[OtherItemsHandler alloc]init];
+
+electronicsHandler.nextHandler = otherItemHandler;
+toysHandler.nextHandler = electronicsHandler;
+
+BasicItem *toy = [[Toy alloc] init];
+BasicItem *electronic = [[Electronics alloc] init];
+BasicItem *trash = [[Trash alloc] init];
+
+[toysHandler handleItem:toy];
+[toysHandler handleItem:electronic];
+[toysHandler handleItem:trash];
 ```
 
 Как видим мы в начале создаем обработчики, потом скрепляем их в цепь, и пытаемся обработать различные элементы. Традиционно лог:
 
 >2013-03-02 15:35:35.668 ChainOfResponsibility[16777:c07] Toy found. Handling
->
 >2013-03-02 15:35:35.671 ChainOfResponsibility[16777:c07] Toy not found. Handling using next handler
->
 >2013-03-02 15:35:35.672 ChainOfResponsibility[16777:c07] Electronics found. Handling
->
 >2013-03-02 15:35:35.673 ChainOfResponsibility[16777:c07] Toy not found. Handling using next handler
->
 >2013-03-02 15:35:35.673 ChainOfResponsibility[16777:c07] Electronics not found. Handling using next handler
->
 >2013-03-02 15:35:35.674 ChainOfResponsibility[16777:c07] Found undefined item. Destroying
 
 [Код примера.][ChainOfResponsibility]
@@ -2655,17 +2570,17 @@ if (!item.isBroken)
 
 Вы заметили как много в нашей жизни шаблонов? Ну к примеру – наше поведение когда мы приходим в незнакомый дом:
 
-1.	Зайти
-2.	Поздороваться с хозяевами
-3.	Раздеться, молясь о том, что у нас носки не дырявые
-4.	Пройти, и охать удияляясь какая большая/уютная/забавная квартира.
+1. Зайти
+2. Поздороваться с хозяевами
+3. Раздеться, молясь о том, что у нас носки не дырявые
+4. Пройти, и охать удияляясь какая большая/уютная/забавная квартира.
 
 Или же когда мы приходим в квартиру, где происходит ремонт:
 
-1.	Зайти
-2.	Поздороваться с хозяевами
-3.	Не разуваться, потому как грязно!
-4.	Поохать когда хозяин квартиры поведает нам смелость его архитектурной мысли!
+1. Зайти
+2. Поздороваться с хозяевами
+3. Не разуваться, потому как грязно!
+4. Поохать когда хозяин квартиры поведает нам смелость его архитектурной мысли!
 
 В целом, все происходит практически одинаково, но с изюминкой в каждом различном случае:) Наверное потому то, это и называется шаблоном поведения.
 Шаблонный метод задает алгоритму пошаговоую инструкцию. Элементы алгоритма же, определяются в наследующих классах.
@@ -2771,7 +2686,6 @@ if (!item.isBroken)
 -(void) addRam
 {
     NSLog(@"Installing 2Gigs of RAM");
-
 }
 
 @end
@@ -2782,36 +2696,25 @@ if (!item.isBroken)
 Тест здесь конечно же – элементарный:
 
 ``` objective-c
-    AndroidMaker *android = [[AndroidMaker alloc] init];
-    iPhoneMaker *iphone = [[iPhoneMaker alloc] init];
-    
-    
-    [android makePhone];
-    [iphone makePhone];
+AndroidMaker *android = [[AndroidMaker alloc] init];
+iPhoneMaker *iphone = [[iPhoneMaker alloc] init];
+
+[android makePhone];
+[iphone makePhone];
 ```
 
 Традиционный log:
 
 >2013-03-03 22:56:28.996 TemplateMethod[21040:c07] Taking a box
->
 >2013-03-03 22:56:28.998 TemplateMethod[21040:c07] Taking a camera
->
 >2013-03-03 22:56:28.999 TemplateMethod[21040:c07] Taking a microphone
->
 >2013-03-03 22:56:29.000 TemplateMethod[21040:c07] Installing 4 more CPUs
->
 >2013-03-03 22:56:29.000 TemplateMethod[21040:c07] Installing 2Gigs of RAM
->
 >2013-03-03 22:56:29.001 TemplateMethod[21040:c07] Assembling everythig
->
 >2013-03-03 22:56:29.001 TemplateMethod[21040:c07] Putting label ‘Designed in California’
->
 >2013-03-03 22:56:29.002 TemplateMethod[21040:c07] Taking a box
->
 >2013-03-03 22:56:29.003 TemplateMethod[21040:c07] Taking a camera
->
 >2013-03-03 22:56:29.003 TemplateMethod[21040:c07] Taking a microphone
->
 >2013-03-03 22:56:29.003 TemplateMethod[21040:c07] Assembling everything
 
 [Код примера.][TemplateMethod]
@@ -2824,11 +2727,11 @@ if (!item.isBroken)
 
 Паттерн Стратегия определяет семейство алгоритмов, которые могут взаимозаменяться.
 
-Когда использовать паттерн:
+#### Когда использовать паттерн:
 
-1.	Вам необходимы различные алгоритмы
-2.	Вы очень не хотите использовать кучу вложеных if-ов
-3.	В различных случаях ваш класс работает по-разному.
+1. Вам необходимы различные алгоритмы
+2. Вы очень не хотите использовать кучу вложеных if-ов
+3. В различных случаях ваш класс работает по-разному.
 
 Давайте напишем пример – RPG игра, в которой у вас есть различные стратегии нападения Вашими персонажами:) Каждый раз, когда вы делаете ход, ваши персонажи делают определенное действие. Итак, для начала управление персонажами! 
 
@@ -2926,15 +2829,14 @@ if (!item.isBroken)
 Код для тестирования:
 
 ``` objective-c
-    Player *p = [[Player alloc] init];
-    AttackStrategy *a = [[AttackStrategy alloc] init];
-    DefenceStrategy *d = [[DefenceStrategy alloc] init];
-    
-    
-    [p changeStrategy:a];
-    [p makeAction];
-    [p changeStrategy:d];
-    [p makeAction];
+Player *p = [[Player alloc] init];
+AttackStrategy *a = [[AttackStrategy alloc] init];
+DefenceStrategy *d = [[DefenceStrategy alloc] init];
+
+[p changeStrategy:a];
+[p makeAction];
+[p changeStrategy:d];
+[p makeAction];
 ```
 
 Собcтвенно все предельно ясно:) В первом случае наши персонажи будут активно атоковать, а после смены стратегии уйдут в глухую оборону. 
@@ -2942,15 +2844,10 @@ if (!item.isBroken)
 Традиционный лог:
 
 >2013-03-04 23:57:44.797 StrategyPatterns[22420:c07] Character 1: Attack all enemies!
->
 >2013-03-04 23:57:44.799 StrategyPatterns[22420:c07] Character 2: Attack all enemies!
->
 >2013-03-04 23:57:44.800 StrategyPatterns[22420:c07] Character 3: Attack all enemies!
->
 >2013-03-04 23:57:44.800 StrategyPatterns[22420:c07] Character 1: Attack all enemies!
->
 >2013-03-04 23:57:44.801 StrategyPatterns[22420:c07] Character 2: Healing Character 1!
->
 >2013-03-04 23:57:44.801 StrategyPatterns[22420:c07] Character 3: Protecting Character 2!
 
 [Код примера.][StrategyPatterns]
@@ -2987,8 +2884,8 @@ if (!item.isBroken)
 ``` objective-c
 @interface FirstCommand : BaseCommand
 {
-@private NSString *_originalString;
-@private NSString *_currentString;
+    @private NSString *_originalString;
+    @private NSString *_currentString;
 }
 
 -(id) initWithArguments: (NSString *) anArgument;
@@ -3004,7 +2901,6 @@ if (!item.isBroken)
     self = [super init];
     _originalString =  anArgument;
     _currentString = anArgument;
-    
     
     return self;
 }
@@ -3089,8 +2985,7 @@ if (!item.isBroken)
 ``` objective-c
 @interface CommandExecutor : NSObject
 {
-@private NSMutableArray *_arrayOfCommands;
-
+    @private NSMutableArray *_arrayOfCommands;
 }
 
 -(void) addCommand:(BaseCommand *) aCommand;
@@ -3139,30 +3034,25 @@ if (!item.isBroken)
 Как видим, наш менеджер может получать очередь команд, и выполнять их все, или даже отменять все действия (пример простой и с багами:) ). Итак, наш тестовый код:
 
 ``` objective-c
-    CommandExecutor *commandE = [[CommandExecutor alloc] init];
-    
-    BaseCommand *cmdF = [[FirstCommand alloc] initWithArguments:@"This is a test string"];
-    BaseCommand *cmdS = [[SecondCommand alloc] initWithArgs:3];
-    
-    [commandE addCommand:cmdF];
-    [commandE addCommand:cmdS];
-    
-    [commandE executeCommands];
-    [commandE undoAll];
+CommandExecutor *commandE = [[CommandExecutor alloc] init];
+
+BaseCommand *cmdF = [[FirstCommand alloc] initWithArguments:@"This is a test string"];
+BaseCommand *cmdS = [[SecondCommand alloc] initWithArgs:3];
+
+[commandE addCommand:cmdF];
+[commandE addCommand:cmdS];
+
+[commandE executeCommands];
+[commandE undoAll];
 ```
 
 И конечно же лог:
 
 >2013-03-06 22:40:47.392 CommandPattern[9871:c07] Current string is equal to This is a new string
->
 >2013-03-06 22:40:47.393 CommandPattern[9871:c07] Execute command called
->
 >2013-03-06 22:40:47.393 CommandPattern[9871:c07] current number is 4
->
 >2013-03-06 22:40:47.394 CommandPattern[9871:c07] Current string is equal to This is a test string
->
 >2013-03-06 22:40:47.394 CommandPattern[9871:c07] Undo of execute command called
->
 >2013-03-06 22:40:47.395 CommandPattern[9871:c07] current number is 3
 
 2. Второй метод реализации паттерна – это уже использование внутренностей самой Cocoa – NSInvocation:
@@ -3200,22 +3090,22 @@ NSInvocation – это объект, который можно использовать, чтобы передать возможност
 А теперь создадим объект типа NSInvocation, который и будет в результате нашей командой:
 
 ``` objective-c
-    NSMethodSignature *signature = [self methodSignatureForSelector:
-						@selector(methodInMainController:andString:)];
-    NSInvocation *invocationToPass =[NSInvocation 
-							invocationWithMethodSignature:signature];
-    [invocationToPass setTarget:self];
-    [invocationToPass setSelector:@selector(methodInMainController:andString:)];
-    
-    int intArgument = 3;
-    NSString *stringArgument = @"This is a string argument";
-    
-    [invocationToPass setArgument:&intArgument atIndex:2];
-    [invocationToPass setArgument:&stringArgument atIndex:3];
-    
-    CommandExecutor *executor = [[CommandExecutor alloc] init];
-    [executor setSpecificCommand:invocationToPass];
-    [executor executeSpecificCommand];
+NSMethodSignature *signature = [self methodSignatureForSelector:
+                                    @selector(methodInMainController:andString:)];
+NSInvocation *invocationToPass =[NSInvocation 
+                                    invocationWithMethodSignature:signature];
+[invocationToPass setTarget:self];
+[invocationToPass setSelector:@selector(methodInMainController:andString:)];
+
+int intArgument = 3;
+NSString *stringArgument = @"This is a string argument";
+
+[invocationToPass setArgument:&intArgument atIndex:2];
+[invocationToPass setArgument:&stringArgument atIndex:3];
+
+CommandExecutor *executor = [[CommandExecutor alloc] init];
+[executor setSpecificCommand:invocationToPass];
+[executor executeSpecificCommand];
 ```
 
 Как видим, в самом начале мы создаем объект, который хранит сигнатуры нашего метода, и создаем объект NSInvocation. После этого мы передаем в него аргументы – не стоит удивляться, что индекс начинается с цифры 2 – index 0 и index 1 зарезервированы под target и selector:)
@@ -3238,9 +3128,9 @@ Flyweight – паттерн который помогает нам отделять определенную информацию, для т
 
 #### Когда использовать этот паттерн?
 
-1.	У вас ооочень много однотипых объектов в приложении
-2.	Много объектов сохранены в памяти, от чего производительность вашего приложения страдает
-3.	Вы видите, что несколько объектов, которые могут быть расшарены – спасут вас от создания тонны других объектов
+1. У вас ооочень много однотипых объектов в приложении
+2. Много объектов сохранены в памяти, от чего производительность вашего приложения страдает
+3. Вы видите, что несколько объектов, которые могут быть расшарены – спасут вас от создания тонны других объектов
 
 Итак, пример:
 Пусть мы пишем игру, где есть два типа персонажей – гоблины и драконы. Для начала создадим базовый класс для всех юнитов:
@@ -3319,24 +3209,25 @@ NSMutableDictionary *_imageDictionary;
 }
 
 @end
+```
 
 Ну и конечно же тест:
 
-    NSMutableArray *units = [[NSMutableArray alloc] init];
-    for ( int i = 0 ; i < 500; i++)
-    {
-        [units addObject:[[Dragon alloc] init]];
-    }
-    for ( int i = 0 ; i < 500; i++)
-    {
-        [units addObject:[[Goblin alloc] init]];
-    }
+``` objective-c
+NSMutableArray *units = [[NSMutableArray alloc] init];
+for ( int i = 0 ; i < 500; i++)
+{
+    [units addObject:[[Dragon alloc] init]];
+}
+for ( int i = 0 ; i < 500; i++)
+{
+    [units addObject:[[Goblin alloc] init]];
+}
 ```
 
 И как ожидается, хоть мы и создаем 1 тысячу юнитов, лог срабатывает только два раза:
 
 >2013-03-09 11:08:45.002 FlyweightPattern[5595:c07] Loading image of the dragon
->
 >2013-03-09 11:08:45.006 FlyweightPattern[5595:c07] Loading image of the goblin
 
 [Код примера.][FlyweightPattern]
@@ -3345,9 +3236,9 @@ NSMutableDictionary *_imageDictionary;
 
 Ох, все кто работает в большой компании – ненавидит доступ к интернету через прокси:) Что делает прокся? Ну многие из нас уверены, что в основном она режет скорость интернета, хотя вероятнее всего она делает еще очень много положительных вещей:
 
-1.	Логирует кто куда ходит.
-2.	Смотрит, чтобы не ходили куда не следует.
-3.	Смотрит, чтобы по нашему коннекшену к нам не ходили.
+1. Логирует кто куда ходит.
+2. Смотрит, чтобы не ходили куда не следует.
+3. Смотрит, чтобы по нашему коннекшену к нам не ходили.
 
 …и так далее. Все эти активности взяты из головы, но они показывают использование прокси в реальной жизни – давать стандартный доступ к чему-либо, при этом обворачивая стандартные вызовы в проксю и добавляя свою логику.
 
@@ -3357,9 +3248,9 @@ NSMutableDictionary *_imageDictionary;
 
 #### Когда использовать паттерн:
 
-1.	Возомжно, у вас есть два сервера – тестовый и продуктовый. Когда Вы дебажите – скорее всего вы будете пользовать тестовый сервер, ну а когда компилируете приложение для продакшена – скорее всего реальный. Эту логику можно реализовать в проксе
-2.	Добавление различных валидаций, и проверок безопасности
-3.	Миллион других возможных ситуаций.
+1. Возомжно, у вас есть два сервера – тестовый и продуктовый. Когда Вы дебажите – скорее всего вы будете пользовать тестовый сервер, ну а когда компилируете приложение для продакшена – скорее всего реальный. Эту логику можно реализовать в проксе
+2. Добавление различных валидаций, и проверок безопасности
+3. Миллион других возможных ситуаций.
 
 Давайте создадим пример. Пусть у нас есть объект, который отвечает за скачку файлов:
 
@@ -3449,32 +3340,28 @@ NSMutableDictionary *_imageDictionary;
 
 Как видим проксятник незначительно умнее:
 
-1.	Он знает про тип пользователя, и даже если дернули метод fastDownload но пользователь не премиум – будет вызван метод slowDownload.
-2.	Он умеет проверять доступ к интернету (пусть это и просто выписка лога).
-3.	Он проверяет, или тип объекта FileDownloader создан, и если нет – создает его.
+1. Он знает про тип пользователя, и даже если дернули метод fastDownload но пользователь не премиум – будет вызван метод slowDownload.
+2. Он умеет проверять доступ к интернету (пусть это и просто выписка лога).
+3. Он проверяет, или тип объекта FileDownloader создан, и если нет – создает его.
 
 Ну что, протестируем:
 
 ``` objective-c
-    FileDownloaderProxy *proxy = [[FileDownloaderProxy alloc] init];
-    
-    [proxy setIsPremiumUser:NO];
-    [proxy fastDownload];
-    
-    [proxy setIsPremiumUser:YES];
-    [proxy fastDownload];
+FileDownloaderProxy *proxy = [[FileDownloaderProxy alloc] init];
+
+[proxy setIsPremiumUser:NO];
+[proxy fastDownload];
+
+[proxy setIsPremiumUser:YES];
+[proxy fastDownload];
 ```
 
 Традиционный лог:
 
 >2013-03-10 13:27:50.312 ProxyPattern[10775:c07] Downloader created
->
 >2013-03-10 13:27:50.313 ProxyPattern[10775:c07] Checking network connectivity…
->
 >2013-03-10 13:27:50.313 ProxyPattern[10775:c07] Sloooooowly downloading…
->
 >2013-03-10 13:27:50.314 ProxyPattern[10775:c07] Checking network connectivity…
->
 >2013-03-10 13:27:50.314 ProxyPattern[10775:c07] Shuuuuuh, already downloaded…
 
 [Код примера.][ProxyPattern]
@@ -3487,10 +3374,10 @@ NSMutableDictionary *_imageDictionary;
 
 Состояние, как таковое, может сохраняться как в файловую систему, так и в базу даных. Яркий пример использование – может быть сворачивание и выключение вашего приложения – во время выключения приложения вы можете сохранить все данные с формы, или настройки, или еще что вам угодно в базу даных через CoreData, чтобы восстановить при включении.
 
-Когда использовать паттерн:
+#### Когда использовать паттерн:
 
-1.	Вам необходимо сохранять состояние объекта как слепок (snapshot) за определенный период
-2.	Вы хотите скрыть интерфейс получения состояния объекта.
+1. Вам необходимо сохранять состояние объекта как слепок (snapshot) за определенный период
+2. Вы хотите скрыть интерфейс получения состояния объекта.
 
 В даном паттерне используются три ключевых объекта: Caretaker (объект, который скрывает реализацию сохранения состояния объекта), originator (собственно сам объект) и конечно же сам Memento (объект, который сохраняет состояние originator).
 
@@ -3513,7 +3400,7 @@ NSMutableDictionary *_imageDictionary;
 ``` objective-c
 @interface Originator : NSObject
 {
-@private OriginatorState *_localState;
+    @private OriginatorState *_localState;
 }
 
 -(void) changeValues;
@@ -3563,7 +3450,7 @@ NSMutableDictionary *_imageDictionary;
 ``` objective-c
 @interface Memento : NSObject
 {
-@private OriginatorState *_localState;
+    @private OriginatorState *_localState;
 }
 
 -(id) initWithState:(OriginatorState *)state;
@@ -3590,14 +3477,14 @@ NSMutableDictionary *_imageDictionary;
 @end
 ```
 
-То есть наш объект Memento – умеет хранить состояние, и, конечно же, отдавать состояние :)
-Ну и теперь, соединим все это в единый паззл, создавая Caretaker:
+То есть, наш объект Memento – умеет хранить состояние, и, конечно же, отдавать состояние :)
+Ну и теперь соединим все это в единый паззл, создавая Caretaker:
 
 ``` objective-c
 @interface Caretaker : NSObject
 {
-@private Originator *_originator;
-@private Memento *_memento;
+    @private Originator *_originator;
+    @private Memento *_memento;
 }
 
 -(void) changeValue;
@@ -3634,28 +3521,23 @@ NSMutableDictionary *_imageDictionary;
 Давайте протестим:
 
 ``` objective-c
-    Caretaker *crtaker = [[Caretaker alloc] init];
-    
-    [crtaker changeValue];
-    [crtaker saveState];
-    [crtaker changeValue];
-    [crtaker changeValue];
-    [crtaker changeValue];
-    [crtaker loadState];
+Caretaker *crtaker = [[Caretaker alloc] init];
+
+[crtaker changeValue];
+[crtaker saveState];
+[crtaker changeValue];
+[crtaker changeValue];
+[crtaker changeValue];
+[crtaker loadState];
 ```
 
 Лог как пример работы паттерна:
 
 >2013-03-11 23:23:30.711 MementoPattern[14985:c07] Current state int = 101, string = Hello World! !
->
 >2013-03-11 23:23:30.712 MementoPattern[14985:c07] Saved state. State int = 101 and string = Hello World! !
->
 >2013-03-11 23:23:30.712 MementoPattern[14985:c07] Current state int = 102, string = Hello World! ! !
->
 >2013-03-11 23:23:30.713 MementoPattern[14985:c07] Current state int = 103, string = Hello World! ! ! !
->
 >2013-03-11 23:23:30.713 MementoPattern[14985:c07] Current state int = 104, string = Hello World! ! ! ! !.
->
 >2013-03-11 23:23:30.713 MementoPattern[14985:c07] Load completed. Current state: int = 101, string = Hello World! !
 
 [Код примера.][MementoPattern]
