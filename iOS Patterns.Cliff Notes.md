@@ -108,9 +108,9 @@ NSLog(@"First Person name  = %@ and surname = %@", firstPerson.name, firstPerson
 
 Как видим лог достаточно ожидаемый:
 
->2013-01-21 01:31:20.986 PrototypePattern[1961:11303] First Person name  = Dima
->2013-01-21 01:31:20.987 PrototypePattern[1961:11303] Second Person name  = Roma
->2013-01-21 01:31:20.987 PrototypePattern[1961:11303] First Person name  = Roma
+>2013-01-21 01:31:20.986 PrototypePattern[1961:11303] First Person name  = Dima <br>
+>2013-01-21 01:31:20.987 PrototypePattern[1961:11303] Second Person name  = Roma <br>
+>2013-01-21 01:31:20.987 PrototypePattern[1961:11303] First Person name  = Roma <br>
 
 Заметьте, что хоть и меняли мы имя для `secondPerson`, но и у `firstPerson` имя поменялось. Просто потому что мы создали два указателя на один и тот же объект.
 
