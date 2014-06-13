@@ -108,9 +108,11 @@ NSLog(@"First Person name  = %@ and surname = %@", firstPerson.name, firstPerson
 
  ак видим лог достаточно ожидаемый:
 
->2013-01-21 01:31:20.986 PrototypePattern[1961:11303] First Person name  = Dima <br>
->2013-01-21 01:31:20.987 PrototypePattern[1961:11303] Second Person name  = Roma <br>
->2013-01-21 01:31:20.987 PrototypePattern[1961:11303] First Person name  = Roma <br>
+> 2013-01-21 01:31:20.986 PrototypePattern[1961:11303] First Person name  = Dima
+>
+> 2013-01-21 01:31:20.987 PrototypePattern[1961:11303] Second Person name  = Roma
+>
+> 2013-01-21 01:31:20.987 PrototypePattern[1961:11303] First Person name  = Roma
 
 «аметьте, что хоть и мен€ли мы им€ дл€ `secondPerson`, но и у `firstPerson` им€ помен€лось. ѕросто потому что мы создали два указател€ на один и тот же объект.
 
@@ -170,9 +172,11 @@ NSLog(@"First Person name  = %@ and surname = %@", firstPerson.name, firstPerson
 
 Ќу и, естественно, лог:
 
->2013-01-21 01:48:36.538 PrototypePattern[2090:11303] First Person name  = Dima and surname = Surname
->2013-01-21 01:48:36.539 PrototypePattern[2090:11303] Second Person name  = Roma and surname = Surname
->2013-01-21 01:48:36.540 PrototypePattern[2090:11303] First Person name  = Dima and surname = Surname
+> 2013-01-21 01:48:36.538 PrototypePattern[2090:11303] First Person name  = Dima and surname = Surname
+>
+> 2013-01-21 01:48:36.539 PrototypePattern[2090:11303] Second Person name  = Roma and surname = Surname
+>
+> 2013-01-21 01:48:36.540 PrototypePattern[2090:11303] First Person name  = Dima and surname = Surname
 
  ак видим, мы в результате получили два независимых объекта, один из которых сделан по подобию первого.
 
@@ -302,12 +306,17 @@ NSLog(@"First Person name  = %@ and surname = %@", firstPerson.name, firstPerson
 
 Ћог:
 
->2013-01-23 23:27:54.223 FactoryMethodPattern[8833:11303] Saving object into Toys database
->2013-01-23 23:27:54.226 FactoryMethodPattern[8833:11303] Saving object into Toys database
->2013-01-23 23:27:54.226 FactoryMethodPattern[8833:11303] Saving object into Toys database
->2013-01-23 23:27:54.227 FactoryMethodPattern[8833:11303] Saving object into Dress database
->2013-01-23 23:27:54.227 FactoryMethodPattern[8833:11303] Saving object into Dress database
->2013-01-23 23:27:54.228 FactoryMethodPattern[8833:11303] Saving object into Toys database
+> 2013-01-23 23:27:54.223 FactoryMethodPattern[8833:11303] Saving object into Toys database
+>
+> 2013-01-23 23:27:54.226 FactoryMethodPattern[8833:11303] Saving object into Toys database
+>
+> 2013-01-23 23:27:54.226 FactoryMethodPattern[8833:11303] Saving object into Toys database
+>
+> 2013-01-23 23:27:54.227 FactoryMethodPattern[8833:11303] Saving object into Dress database
+>
+> 2013-01-23 23:27:54.227 FactoryMethodPattern[8833:11303] Saving object into Dress database
+>
+> 2013-01-23 23:27:54.228 FactoryMethodPattern[8833:11303] Saving object into Toys database
 
 [ од примера.][FactoryMethodPattern]
  
@@ -507,12 +516,14 @@ NSLog(@"IPhone named = %@, osname = %@", iphone.productName, iphone.osName);
 
 Ћог будет выгл€дить следующим образом:
 
->2013-01-26 20:00:56.663 AbstractFactory[13093:11303] IPad named = Buan Que Ipado Killa, osname = Windows CE, screensize = 12.5
->2013-01-26 20:00:56.665 AbstractFactory [13093:11303] IPhone named = Chi Huan Hua Phone, osname = Android
+> 2013-01-26 20:00:56.663 AbstractFactory[13093:11303] IPad named = Buan Que Ipado Killa, osname = Windows CE, screensize = 12.5
+>
+> 2013-01-26 20:00:56.665 AbstractFactory [13093:11303] IPhone named = Chi Huan Hua Phone, osname = Android
 
 “еперь, просто помен€в значение переменной '_isThirdWorld' на 'false', и лог будет совсем другой:
 
 >2013-01-26 20:02:21.745 AbstractFactory [13115:11303] IPad named = IPad, osname = iOS, screensize = 7.7
+>
 >2013-01-26 20:02:21.747 AbstractFactory [13115:11303] IPhone named = IPhone, osname = iOS
 
 [ од примера.][AbstractFabric]
@@ -720,14 +731,15 @@ _phone.name, _phone.osVersion, _phone.cpuCodeName, _phone.RAMsize, _phone.osVers
 
 “радиционный лог:
 
->2013-01-28 00:38:51.863 BuilderPattern[708:11303] Phone Name = Low price phone!, osVersion = Android 2.3, cpu code name = Some shitty CPU, ram size = 256, os version code = 3, launcher = Hia Tsung!
->2013-01-28 00:38:51.867 BuilderPattern[708:11303] Phone Name = High price phone!, osVersion = Android 4.1, cpu code name = Some shitty but expensive CPU, ram size = 1024, os version code = 4.1, launcher = Samsung Launcher
+> 2013-01-28 00:38:51.863 BuilderPattern[708:11303] Phone Name = Low price phone!, osVersion = Android 2.3, cpu code name = Some shitty CPU, ram size = 256, os version code = 3, launcher = Hia Tsung!
+>
+> 2013-01-28 00:38:51.867 BuilderPattern[708:11303] Phone Name = High price phone!, osVersion = Android 4.1, cpu code name = Some shitty but expensive CPU, ram size = 1024, os version code = 4.1, launcher = Samsung Launcher
 
 [ од примера.][BuilderPattern]
  
 ## <a name="singleton"></a>Singleton
 
->//реализаци€ паттерна, котора€ будет приведена тут, подразумевает использование GCD и ARC.
+> //реализаци€ паттерна, котора€ будет приведена тут, подразумевает использование GCD и ARC.
 
  то вообще бы мог подумать, что Singleton такой не самый простой паттерн в iOS? ¬ернее, что есть столько версий. —обственно, в .NET, помнитс€, наблюдалась точно така€ же штука, но там, в основном, были просто апдейты к самой простой версии паттерна. я вообще считаю, что сколько людей - столько и версий синглтона.
 
@@ -961,10 +973,13 @@ RavenAdapter *ravenAdapter = [[RavenAdapter alloc] initWithRaven:simpleRaven];
 
 –езультат можно легко увидеть в логе:
 
->2013-02-03 15:43:14.447 AdapterPattern[5985:11303] OMG! I am flying!
->2013-02-03 15:43:14.449 AdapterPattern[5985:11303] Tew-tew-tew
->2013-02-03 15:43:14.449 AdapterPattern[5985:11303] I am flying and seak for killing!
->2013-02-03 15:43:14.450 AdapterPattern[5985:11303] Kaaaar-kaaaaar-kaaaaaaar!
+> 2013-02-03 15:43:14.447 AdapterPattern[5985:11303] OMG! I am flying!
+>
+> 2013-02-03 15:43:14.449 AdapterPattern[5985:11303] Tew-tew-tew
+>
+> 2013-02-03 15:43:14.449 AdapterPattern[5985:11303] I am flying and seak for killing!
+>
+> 2013-02-03 15:43:14.450 AdapterPattern[5985:11303] Kaaaar-kaaaaar-kaaaaaaar!
 
 “еперь более сложна€ реализаци€, котора€ все еще зависит от протоколов, но уже использует делегацию. ¬ернемс€ к нашему несчастному ноутбуку и зар€дке:
 
@@ -1113,10 +1128,13 @@ USANotebookEuropeanAdapter *adapter =
 
 Ћог нам выведет:
 
->2013-02-03 15:57:42.624 AdapterPattern[6179:11303] Charging with 220 and round holes!
->2013-02-03 15:57:42.626 AdapterPattern[6179:11303] CТmon I am charging
->2013-02-03 15:57:42.626 AdapterPattern[6179:11303] Charge Notebook Rect Holes
->2013-02-03 15:57:42.627 AdapterPattern[6179:11303] CТmon I am charging
+> 2013-02-03 15:57:42.624 AdapterPattern[6179:11303] Charging with 220 and round holes!
+>
+> 2013-02-03 15:57:42.626 AdapterPattern[6179:11303] CТmon I am charging
+>
+> 2013-02-03 15:57:42.626 AdapterPattern[6179:11303] Charge Notebook Rect Holes
+>
+> 2013-02-03 15:57:42.627 AdapterPattern[6179:11303] CТmon I am charging
 
 [ од примера.][AdapterPattern]
 
@@ -1223,14 +1241,21 @@ p.headPhones = ep;
 
 » конечно же log:
 
->2013-02-06 23:03:52.378 BridgePattern[3397:c07] puf Ц puf Ц pufhrrr
->2013-02-06 23:03:52.379 BridgePattern[3397:c07] puf Ц puf Ц pufhrrr
->2013-02-06 23:03:52.380 BridgePattern[3397:c07] beep Ц beep Ц bhhhrhrhrep
->2013-02-06 23:03:52.380 BridgePattern[3397:c07] beep Ц beep Ц bhhhrhrhrep
->2013-02-06 23:03:52.380 BridgePattern[3397:c07] Bam-Bam-Bam
->2013-02-06 23:03:52.381 BridgePattern[3397:c07] Bam-Bam-Bam
->2013-02-06 23:03:52.381 BridgePattern[3397:c07] Beep-Beep-Beep Taram Ц Rararam
->2013-02-06 23:03:52.381 BridgePattern[3397:c07] Beep-Beep-Beep Taram Ц Rararam
+> 2013-02-06 23:03:52.378 BridgePattern[3397:c07] puf Ц puf Ц pufhrrr
+>
+> 2013-02-06 23:03:52.379 BridgePattern[3397:c07] puf Ц puf Ц pufhrrr
+>
+> 2013-02-06 23:03:52.380 BridgePattern[3397:c07] beep Ц beep Ц bhhhrhrhrep
+>
+> 2013-02-06 23:03:52.380 BridgePattern[3397:c07] beep Ц beep Ц bhhhrhrhrep
+>
+> 2013-02-06 23:03:52.380 BridgePattern[3397:c07] Bam-Bam-Bam
+>
+> 2013-02-06 23:03:52.381 BridgePattern[3397:c07] Bam-Bam-Bam
+>
+> 2013-02-06 23:03:52.381 BridgePattern[3397:c07] Beep-Beep-Beep Taram Ц Rararam
+>
+> 2013-02-06 23:03:52.381 BridgePattern[3397:c07] Beep-Beep-Beep Taram Ц Rararam
 
 [ од примера.][BridgePattern]
 
@@ -1379,14 +1404,21 @@ TravellSystemFacade *facade = [[TravellSystemFacade alloc] init];
 
 ƒавайте посмотрим лог:
 
->2013-02-09 17:46:28.442 FacadePattern[2410:c07] Finding your location. Hmmm, here you are!
->2013-02-09 17:46:28.444 FacadePattern[2410:c07] So you wanna travell to Lviv
->2013-02-09 17:46:28.445 FacadePattern[2410:c07] Okay, to travell to this location we are using google mapsЕ.
->2013-02-09 17:46:28.446 FacadePattern[2410:c07] Okay, to travell there you will probabply need dragon!Arghhhhh
->2013-02-09 17:46:28.446 FacadePattern[2410:c07] Maaaam, can I order a dragon?Е YesЕ Yes, green oneЕ Yes, with fire!Е No, not a dragon of deathЕ Thank you!
->2013-02-09 17:46:28.447 FacadePattern[2410:c07] Connecting to our ticketing systemЕ
->2013-02-09 17:46:28.447 FacadePattern[2410:c07] Hmmm, ticket for travelling on the green dragon.InterestingЕ
->2013-02-09 17:46:28.448 FacadePattern[2410:c07] Maaan, you are flying on dragon!
+> 2013-02-09 17:46:28.442 FacadePattern[2410:c07] Finding your location. Hmmm, here you are!
+>
+> 2013-02-09 17:46:28.444 FacadePattern[2410:c07] So you wanna travell to Lviv
+>
+> 2013-02-09 17:46:28.445 FacadePattern[2410:c07] Okay, to travell to this location we are using google mapsЕ.
+>
+> 2013-02-09 17:46:28.446 FacadePattern[2410:c07] Okay, to travell there you will probabply need dragon!Arghhhhh
+>
+> 2013-02-09 17:46:28.446 FacadePattern[2410:c07] Maaaam, can I order a dragon?Е YesЕ Yes, green oneЕ Yes, with fire!Е No, not a dragon of deathЕ Thank you!
+>
+> 2013-02-09 17:46:28.447 FacadePattern[2410:c07] Connecting to our ticketing systemЕ
+>
+> 2013-02-09 17:46:28.447 FacadePattern[2410:c07] Hmmm, ticket for travelling on the green dragon.InterestingЕ
+>
+> 2013-02-09 17:46:28.448 FacadePattern[2410:c07] Maaan, you are flying on dragon!
 
 [ од примера.][FacadePattern]
 
@@ -1528,9 +1560,11 @@ proccessor._thermometer = therm;
 
 » конечно же лог:
 
->2013-02-12 18:45:06.790 MediatorPattern[8809:c07] Value changed! We need to do smth!
->2013-02-12 18:45:06.793 MediatorPattern[8809:c07] Oh, the change is temperature
->2013-02-12 18:45:06.793 MediatorPattern[8809:c07] ConditioningЕ
+> 2013-02-12 18:45:06.790 MediatorPattern[8809:c07] Value changed! We need to do smth!
+>
+> 2013-02-12 18:45:06.793 MediatorPattern[8809:c07] Oh, the change is temperature
+>
+> 2013-02-12 18:45:06.793 MediatorPattern[8809:c07] ConditioningЕ
 
 [ од примера.][MediatorPattern]
 
@@ -1689,8 +1723,9 @@ OtherSubscriber *otherSubscriber = [[OtherSubscriber alloc] init];
 ```
 » естественно log:
 
->2013-02-16 17:31:43.176 ObserverPattern[24332:c07] And some subscriber tells: Hmm, value strange value changed to newValue
->2013-02-16 17:31:43.177 ObserverPattern[24332:c07] And some another subscriber tells: Hmm, value strange value changed to newValue
+> 2013-02-16 17:31:43.176 ObserverPattern[24332:c07] And some subscriber tells: Hmm, value strange value changed to newValue
+>
+> 2013-02-16 17:31:43.177 ObserverPattern[24332:c07] And some another subscriber tells: Hmm, value strange value changed to newValue
 
 Ќу и конечно же без использовани€ KVO описание паттерна выгл€дило бы неполным.
 
@@ -1754,9 +1789,9 @@ KVOObserver *kvoObserver = [[KVOObserver alloc] init];
  ак видно из примера, мы дл€ объекта за которым мы наблюдаем, выполн€ем функцию addObserver Ц где устанавливаем, кто будет наблюдать за изменени€ми, за изменени€ми какого свойства мы будем наблюдать и остальные опции. ƒальше мен€ем значение свойства, и так как мы все это проделываем на нажатие кнопки Ц в конце мы удал€ем наблюдател€ с нашего объекта, чтобы пам€ть не текла.
 Ћог говорит сам за себ€:
 
->2013-02-17 11:41:58.051 ObserverPattern[26689:c07] KVO: Value changed;
+> 2013-02-17 11:41:58.051 ObserverPattern[26689:c07] KVO: Value changed;
 >
->2013-02-17 11:41:58.052 ObserverPattern[26689:c07] KVO: Value changed;
+> 2013-02-17 11:41:58.052 ObserverPattern[26689:c07] KVO: Value changed;
 
 [ од примера.][ObserverPattern]
 
@@ -1887,14 +1922,23 @@ NSLog(@"%@", rootContainer.getData);
 » конечно же лог:
 
 >2013-02-17 13:04:09.470 CompositePattern[27392:c07]
+>
 >&lt;ContainerValues&gt;
+>
 >    &lt;level1 value/&gt;
+>
 >    &lt;ContainerValues&gt;
+>
 >        &lt;level2 value/&gt;
+>
 >    &lt;/ContainerValues&gt;
+>
 >    &lt;ContainerValues&gt;
+>
 >        &lt;level2 value 2/&gt;
+>
 >    &lt;/ContainerValues&gt;
+>
 >&lt;/ContainerValues&gt;
 
 [ од примера.][CompositePattern]
@@ -2136,11 +2180,15 @@ while (element = [badIterator nextObject]) {
 ```
 
 » конечно же лог:
->2013-02-25 01:18:10.401 IteratorPattern[5000:c07] Good Item = Item1
->2013-02-25 01:18:10.403 IteratorPattern[5000:c07] Good Item = Item2
->2013-02-25 01:18:10.403 IteratorPattern[5000:c07] Good Item = Item5
->2013-02-25 01:18:10.404 IteratorPattern[5000:c07] Bad Item = Item3
->2013-02-25 01:18:10.405 IteratorPattern[5000:c07] Bad Item = Item4
+> 2013-02-25 01:18:10.401 IteratorPattern[5000:c07] Good Item = Item1
+>
+> 2013-02-25 01:18:10.403 IteratorPattern[5000:c07] Good Item = Item2
+>
+> 2013-02-25 01:18:10.403 IteratorPattern[5000:c07] Good Item = Item5
+>
+> 2013-02-25 01:18:10.404 IteratorPattern[5000:c07] Bad Item = Item3
+>
+> 2013-02-25 01:18:10.405 IteratorPattern[5000:c07] Bad Item = Item4
 
 [ од примера.][IteratorPattern]
  
@@ -2316,32 +2364,51 @@ QualityCheckerVisitor *qualityVisitor = [[QualityCheckerVisitor alloc] init];
 »так, при вызове метода accept нашего склада, визитер сначала проведывает наш склад, а потом проведывает каждый товар на этом складе. ѕри этом мы можем мен€ть как визитера так и алгоритм, и это не повлечет изменени€ в коде клиента:)
 “радиционный лог:
 
->2013-02-26 00:19:47.756 VisitorPattern[8748:c07] Hmmm, I donТt know how much Warehouse costs!
->2013-02-26 00:19:47.759 VisitorPattern[8748:c07] Item: Item1 have price = 25
->2013-02-26 00:19:47.759 VisitorPattern[8748:c07] Item: Item2 have price = 32
->2013-02-26 00:19:47.760 VisitorPattern[8748:c07] Item: Item3 have price = 45
->2013-02-26 00:19:47.761 VisitorPattern[8748:c07] Item: Item4 have price = 33
->2013-02-26 00:19:47.762 VisitorPattern[8748:c07] Item: Item5 have price = 12
->2013-02-26 00:19:47.763 VisitorPattern[8748:c07] Item: Item6 have price = 78
->2013-02-26 00:19:47.763 VisitorPattern[8748:c07] Item: Item7 have price = 34
->2013-02-26 00:19:47.764 VisitorPattern[8748:c07] Item: Item8 have price = 51
->2013-02-26 00:19:47.765 VisitorPattern[8748:c07] Item: Item9 have price = 25
->2013-02-26 00:19:47.765 VisitorPattern[8748:c07] Hmmm, nice warehouse!
->2013-02-26 00:19:47.766 VisitorPattern[8748:c07] Item: Item1 is pretty cool!
->2013-02-26 00:19:47.767 VisitorPattern[8748:c07] Item: Item2 is pretty cool!
->2013-02-26 00:19:47.767 VisitorPattern[8748:c07] Item: Item3 is broken
->2013-02-26 00:19:47.768 VisitorPattern[8748:c07] Item: Item4 is pretty cool!
->2013-02-26 00:19:47.769 VisitorPattern[8748:c07] Item: Item5 is pretty cool!
->2013-02-26 00:19:47.837 VisitorPattern[8748:c07] Item: Item6 is broken
->2013-02-26 00:19:47.837 VisitorPattern[8748:c07] Item: Item7 is broken
->2013-02-26 00:19:47.837 VisitorPattern[8748:c07] Item: Item8 is pretty cool!
->2013-02-26 00:19:47.838 VisitorPattern[8748:c07] Item: Item9 is pretty cool!
+> 2013-02-26 00:19:47.756 VisitorPattern[8748:c07] Hmmm, I donТt know how much Warehouse costs!
+>
+> 2013-02-26 00:19:47.759 VisitorPattern[8748:c07] Item: Item1 have price = 25
+>
+> 2013-02-26 00:19:47.759 VisitorPattern[8748:c07] Item: Item2 have price = 32
+>
+> 2013-02-26 00:19:47.760 VisitorPattern[8748:c07] Item: Item3 have price = 45
+>
+> 2013-02-26 00:19:47.761 VisitorPattern[8748:c07] Item: Item4 have price = 33
+>
+> 2013-02-26 00:19:47.762 VisitorPattern[8748:c07] Item: Item5 have price = 12
+>
+> 2013-02-26 00:19:47.763 VisitorPattern[8748:c07] Item: Item6 have price = 78
+>
+> 2013-02-26 00:19:47.763 VisitorPattern[8748:c07] Item: Item7 have price = 34
+>
+> 2013-02-26 00:19:47.764 VisitorPattern[8748:c07] Item: Item8 have price = 51
+>
+> 2013-02-26 00:19:47.765 VisitorPattern[8748:c07] Item: Item9 have price = 25
+>
+> 2013-02-26 00:19:47.765 VisitorPattern[8748:c07] Hmmm, nice warehouse!
+>
+> 2013-02-26 00:19:47.766 VisitorPattern[8748:c07] Item: Item1 is pretty cool!
+>
+> 2013-02-26 00:19:47.767 VisitorPattern[8748:c07] Item: Item2 is pretty cool!
+>
+> 2013-02-26 00:19:47.767 VisitorPattern[8748:c07] Item: Item3 is broken
+>
+> 2013-02-26 00:19:47.768 VisitorPattern[8748:c07] Item: Item4 is pretty cool!
+>
+> 2013-02-26 00:19:47.769 VisitorPattern[8748:c07] Item: Item5 is pretty cool!
+>
+> 2013-02-26 00:19:47.837 VisitorPattern[8748:c07] Item: Item6 is broken
+>
+> 2013-02-26 00:19:47.837 VisitorPattern[8748:c07] Item: Item7 is broken
+>
+> 2013-02-26 00:19:47.837 VisitorPattern[8748:c07] Item: Item8 is pretty cool!
+>
+> 2013-02-26 00:19:47.838 VisitorPattern[8748:c07] Item: Item9 is pretty cool!
 
 [ од примера.][VisitorPattern]
  
 ## <a name="decorator"></a>Decorator
 
->//уже после того как € решил оформить все в книгу, в блог посте в котором изначально € описал этот паттерн, некто по имени —аша сказал, что € привожу неклассический пример этого шаблона. » он действительно прав, пример тут использует категории, хот€ в классическом исполнении сам декоратор должен быть отдельным объектом.  лассическа€ реализаци€ будет добавлена позже
+> //уже после того как € решил оформить все в книгу, в блог посте в котором изначально € описал этот паттерн, некто по имени —аша сказал, что € привожу неклассический пример этого шаблона. » он действительно прав, пример тут использует категории, хот€ в классическом исполнении сам декоратор должен быть отдельным объектом.  лассическа€ реализаци€ будет добавлена позже
 
  лассный пример декоратора Ц различные корпуса дл€ новых телефонов.  ак-то € сразу с конца начал:) ƒл€ начала у нас есть телефон. Ќо так как телефон дорогой, мы будем очень счастливы если он не разобьетс€ при любом падении Ц потому мы покупаем чехол дл€ него. “о есть, к уже существующему предмету мы добавили функционал защиты от падени€. Ќу еще мы вз€ли стильный чехол Ц теперь наш телефон еще и выгл€дит отлично. ј потом мы докупили съемный объектив, с помощью которого можно делать фотографии с эффектом Урыбьего глазаФ. ƒекорировали наш телефон дополнительным функционалом:)
 
@@ -2401,7 +2468,7 @@ NSLog(@"Date is %@", [dateNow convertDateToString]);
 
 “радиционный log:
 
->2013-03-01 00:30:18.328 DecoratorPattern[11731:c07] Date is 2013/01/03
+> 2013-03-01 00:30:18.328 DecoratorPattern[11731:c07] Date is 2013/01/03
 
 [ од примера.][DecoratorPattern]
 
@@ -2557,12 +2624,17 @@ BasicItem *trash = [[Trash alloc] init];
 
  ак видим мы в начале создаем обработчики, потом скрепл€ем их в цепь, и пытаемс€ обработать различные элементы. “радиционно лог:
 
->2013-03-02 15:35:35.668 ChainOfResponsibility[16777:c07] Toy found. Handling
->2013-03-02 15:35:35.671 ChainOfResponsibility[16777:c07] Toy not found. Handling using next handler
->2013-03-02 15:35:35.672 ChainOfResponsibility[16777:c07] Electronics found. Handling
->2013-03-02 15:35:35.673 ChainOfResponsibility[16777:c07] Toy not found. Handling using next handler
->2013-03-02 15:35:35.673 ChainOfResponsibility[16777:c07] Electronics not found. Handling using next handler
->2013-03-02 15:35:35.674 ChainOfResponsibility[16777:c07] Found undefined item. Destroying
+> 2013-03-02 15:35:35.668 ChainOfResponsibility[16777:c07] Toy found. Handling
+>
+> 2013-03-02 15:35:35.671 ChainOfResponsibility[16777:c07] Toy not found. Handling using next handler
+>
+> 2013-03-02 15:35:35.672 ChainOfResponsibility[16777:c07] Electronics found. Handling
+>
+> 2013-03-02 15:35:35.673 ChainOfResponsibility[16777:c07] Toy not found. Handling using next handler
+>
+> 2013-03-02 15:35:35.673 ChainOfResponsibility[16777:c07] Electronics not found. Handling using next handler
+>
+> 2013-03-02 15:35:35.674 ChainOfResponsibility[16777:c07] Found undefined item. Destroying
 
 [ од примера.][ChainOfResponsibility]
  
@@ -2705,17 +2777,27 @@ iPhoneMaker *iphone = [[iPhoneMaker alloc] init];
 
 “радиционный log:
 
->2013-03-03 22:56:28.996 TemplateMethod[21040:c07] Taking a box
->2013-03-03 22:56:28.998 TemplateMethod[21040:c07] Taking a camera
->2013-03-03 22:56:28.999 TemplateMethod[21040:c07] Taking a microphone
->2013-03-03 22:56:29.000 TemplateMethod[21040:c07] Installing 4 more CPUs
->2013-03-03 22:56:29.000 TemplateMethod[21040:c07] Installing 2Gigs of RAM
->2013-03-03 22:56:29.001 TemplateMethod[21040:c07] Assembling everythig
->2013-03-03 22:56:29.001 TemplateMethod[21040:c07] Putting label СDesigned in CaliforniaТ
->2013-03-03 22:56:29.002 TemplateMethod[21040:c07] Taking a box
->2013-03-03 22:56:29.003 TemplateMethod[21040:c07] Taking a camera
->2013-03-03 22:56:29.003 TemplateMethod[21040:c07] Taking a microphone
->2013-03-03 22:56:29.003 TemplateMethod[21040:c07] Assembling everything
+> 2013-03-03 22:56:28.996 TemplateMethod[21040:c07] Taking a box
+>
+> 2013-03-03 22:56:28.998 TemplateMethod[21040:c07] Taking a camera
+>
+> 2013-03-03 22:56:28.999 TemplateMethod[21040:c07] Taking a microphone
+>
+> 2013-03-03 22:56:29.000 TemplateMethod[21040:c07] Installing 4 more CPUs
+>
+> 2013-03-03 22:56:29.000 TemplateMethod[21040:c07] Installing 2Gigs of RAM
+>
+> 2013-03-03 22:56:29.001 TemplateMethod[21040:c07] Assembling everythig
+>
+> 2013-03-03 22:56:29.001 TemplateMethod[21040:c07] Putting label СDesigned in CaliforniaТ
+>
+> 2013-03-03 22:56:29.002 TemplateMethod[21040:c07] Taking a box
+>
+> 2013-03-03 22:56:29.003 TemplateMethod[21040:c07] Taking a camera
+>
+> 2013-03-03 22:56:29.003 TemplateMethod[21040:c07] Taking a microphone
+>
+> 2013-03-03 22:56:29.003 TemplateMethod[21040:c07] Assembling everything
 
 [ од примера.][TemplateMethod]
 
@@ -2843,12 +2925,17 @@ DefenceStrategy *d = [[DefenceStrategy alloc] init];
 
 “радиционный лог:
 
->2013-03-04 23:57:44.797 StrategyPatterns[22420:c07] Character 1: Attack all enemies!
->2013-03-04 23:57:44.799 StrategyPatterns[22420:c07] Character 2: Attack all enemies!
->2013-03-04 23:57:44.800 StrategyPatterns[22420:c07] Character 3: Attack all enemies!
->2013-03-04 23:57:44.800 StrategyPatterns[22420:c07] Character 1: Attack all enemies!
->2013-03-04 23:57:44.801 StrategyPatterns[22420:c07] Character 2: Healing Character 1!
->2013-03-04 23:57:44.801 StrategyPatterns[22420:c07] Character 3: Protecting Character 2!
+> 2013-03-04 23:57:44.797 StrategyPatterns[22420:c07] Character 1: Attack all enemies!
+>
+> 2013-03-04 23:57:44.799 StrategyPatterns[22420:c07] Character 2: Attack all enemies!
+>
+> 2013-03-04 23:57:44.800 StrategyPatterns[22420:c07] Character 3: Attack all enemies!
+>
+> 2013-03-04 23:57:44.800 StrategyPatterns[22420:c07] Character 1: Attack all enemies!
+>
+> 2013-03-04 23:57:44.801 StrategyPatterns[22420:c07] Character 2: Healing Character 1!
+>
+> 2013-03-04 23:57:44.801 StrategyPatterns[22420:c07] Character 3: Protecting Character 2!
 
 [ од примера.][StrategyPatterns]
 
@@ -3048,12 +3135,17 @@ BaseCommand *cmdS = [[SecondCommand alloc] initWithArgs:3];
 
 » конечно же лог:
 
->2013-03-06 22:40:47.392 CommandPattern[9871:c07] Current string is equal to This is a new string
->2013-03-06 22:40:47.393 CommandPattern[9871:c07] Execute command called
->2013-03-06 22:40:47.393 CommandPattern[9871:c07] current number is 4
->2013-03-06 22:40:47.394 CommandPattern[9871:c07] Current string is equal to This is a test string
->2013-03-06 22:40:47.394 CommandPattern[9871:c07] Undo of execute command called
->2013-03-06 22:40:47.395 CommandPattern[9871:c07] current number is 3
+> 2013-03-06 22:40:47.392 CommandPattern[9871:c07] Current string is equal to This is a new string
+>
+> 2013-03-06 22:40:47.393 CommandPattern[9871:c07] Execute command called
+>
+> 2013-03-06 22:40:47.393 CommandPattern[9871:c07] current number is 4
+>
+> 2013-03-06 22:40:47.394 CommandPattern[9871:c07] Current string is equal to This is a test string
+>
+> 2013-03-06 22:40:47.394 CommandPattern[9871:c07] Undo of execute command called
+>
+> 2013-03-06 22:40:47.395 CommandPattern[9871:c07] current number is 3
 
 2. ¬торой метод реализации паттерна Ц это уже использование внутренностей самой Cocoa Ц NSInvocation:
 
@@ -3112,7 +3204,7 @@ CommandExecutor *executor = [[CommandExecutor alloc] init];
 
 Ќу и конечно же лог:
 
->2013-03-06 23:18:26.624 CommandPattern[10479:c07] Method called with first argument = 3 and second argument = This is a string argument
+> 2013-03-06 23:18:26.624 CommandPattern[10479:c07] Method called with first argument = 3 and second argument = This is a string argument
 
 [ од примера.][CommandPattern]
 
@@ -3227,8 +3319,9 @@ for ( int i = 0 ; i < 500; i++)
 
 » как ожидаетс€, хоть мы и создаем 1 тыс€чу юнитов, лог срабатывает только два раза:
 
->2013-03-09 11:08:45.002 FlyweightPattern[5595:c07] Loading image of the dragon
->2013-03-09 11:08:45.006 FlyweightPattern[5595:c07] Loading image of the goblin
+> 2013-03-09 11:08:45.002 FlyweightPattern[5595:c07] Loading image of the dragon
+>
+> 2013-03-09 11:08:45.006 FlyweightPattern[5595:c07] Loading image of the goblin
 
 [ од примера.][FlyweightPattern]
  
@@ -3358,11 +3451,15 @@ FileDownloaderProxy *proxy = [[FileDownloaderProxy alloc] init];
 
 “радиционный лог:
 
->2013-03-10 13:27:50.312 ProxyPattern[10775:c07] Downloader created
->2013-03-10 13:27:50.313 ProxyPattern[10775:c07] Checking network connectivityЕ
->2013-03-10 13:27:50.313 ProxyPattern[10775:c07] Sloooooowly downloadingЕ
->2013-03-10 13:27:50.314 ProxyPattern[10775:c07] Checking network connectivityЕ
->2013-03-10 13:27:50.314 ProxyPattern[10775:c07] Shuuuuuh, already downloadedЕ
+> 2013-03-10 13:27:50.312 ProxyPattern[10775:c07] Downloader created
+>
+> 2013-03-10 13:27:50.313 ProxyPattern[10775:c07] Checking network connectivityЕ
+>
+> 2013-03-10 13:27:50.313 ProxyPattern[10775:c07] Sloooooowly downloadingЕ
+>
+> 2013-03-10 13:27:50.314 ProxyPattern[10775:c07] Checking network connectivityЕ
+>
+> 2013-03-10 13:27:50.314 ProxyPattern[10775:c07] Shuuuuuh, already downloadedЕ
 
 [ од примера.][ProxyPattern]
 
@@ -3533,12 +3630,17 @@ Caretaker *crtaker = [[Caretaker alloc] init];
 
 Ћог как пример работы паттерна:
 
->2013-03-11 23:23:30.711 MementoPattern[14985:c07] Current state int = 101, string = Hello World! !
->2013-03-11 23:23:30.712 MementoPattern[14985:c07] Saved state. State int = 101 and string = Hello World! !
->2013-03-11 23:23:30.712 MementoPattern[14985:c07] Current state int = 102, string = Hello World! ! !
->2013-03-11 23:23:30.713 MementoPattern[14985:c07] Current state int = 103, string = Hello World! ! ! !
->2013-03-11 23:23:30.713 MementoPattern[14985:c07] Current state int = 104, string = Hello World! ! ! ! !.
->2013-03-11 23:23:30.713 MementoPattern[14985:c07] Load completed. Current state: int = 101, string = Hello World! !
+> 2013-03-11 23:23:30.711 MementoPattern[14985:c07] Current state int = 101, string = Hello World! !
+>
+> 2013-03-11 23:23:30.712 MementoPattern[14985:c07] Saved state. State int = 101 and string = Hello World! !
+>
+> 2013-03-11 23:23:30.712 MementoPattern[14985:c07] Current state int = 102, string = Hello World! ! !
+>
+> 2013-03-11 23:23:30.713 MementoPattern[14985:c07] Current state int = 103, string = Hello World! ! ! !
+>
+> 2013-03-11 23:23:30.713 MementoPattern[14985:c07] Current state int = 104, string = Hello World! ! ! ! !.
+>
+> 2013-03-11 23:23:30.713 MementoPattern[14985:c07] Load completed. Current state: int = 101, string = Hello World! !
 
 [ од примера.][MementoPattern]
 
